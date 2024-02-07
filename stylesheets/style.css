@@ -111,6 +111,9 @@ body{
     font-size: 14px;
     color: gray; 
 }
+#linkedInHref{
+    text-decoration: none;
+}
 #linkedInHref:hover{
     text-decoration: underline;
     cursor: pointer;
@@ -125,6 +128,7 @@ body{
     border-radius: 16px;
     box-shadow: 2px 2px 20px 3px black;
     margin-bottom: 35px;
+    max-width: 90vw;
 }
 .contact-info > h1{
     display: flex;

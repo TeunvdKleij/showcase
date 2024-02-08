@@ -128,7 +128,8 @@ body{
 }
 .personalia-contact-info{
     border-radius: 16px;
-    box-shadow: 2px 2px 20px 3px black;
+    background-color: rgba(203, 228, 232, 0.25);
+    backdrop-filter: blur 100px;
     margin-bottom: 35px;
     max-width: 90vw;
 }

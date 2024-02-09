@@ -5,9 +5,24 @@
     <title>CV Teun van der Kleij</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script defer src="javascript/gdpr.js"></script>
+    
 </head>
 
 <body>
+    <div class="container hide">
+    <section class="gdpr-consent hide">
+        <div class="gdpr-consent__description">
+            <p>Deze website gebruikt cookies.
+            We gebruiken cookies om content te personaliseren, voor social media en het analyseren
+                van verkeer op de website, advertenties.</p>
+        </div>
+        <div class="gdpr-consent__choice">
+            <button class="gdpr-consent__button--accept">Ja, natuurlijk</button>
+            <button class="gdpr-consent__button--reject">Neu, misschien later</button>
+        </div>
+    </section>
+    </div>
 
 <div class="page">
     <section class="personalia">
@@ -48,6 +63,10 @@
     </section>
 
     <section class="profile">
+        <nav class="profile-buttons">
+            <button class="profile-button profile-button__current">Profiel</button>
+            <button class="profile-button">Contacten</button>
+        </nav>
         <section class="profile-content">
             <div class="profile-content__category">
                 <h3 class="profile-content__category-title">Opleidingen</h3>
@@ -102,7 +121,6 @@
                     <h4 class="profile-content__title">Scrum</h4>
             </div>         
         </section>
-
     </section>
 </div>
 

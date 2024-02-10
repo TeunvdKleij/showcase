@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script defer src="javascript/gdpr.js"></script>
+    <script defer src="javascript/currectSelected.js"></script>
     
 </head>
 
@@ -13,9 +14,11 @@
     <div class="container hide">
     <section class="gdpr-consent hide">
         <div class="gdpr-consent__description">
-            <p>Deze website gebruikt cookies.
-            We gebruiken cookies om content te personaliseren, voor social media en het analyseren
-                van verkeer op de website, advertenties.</p>
+            <p>
+                Deze website gebruikt cookies.
+                We gebruiken cookies om content te personaliseren, voor social media en het analyseren
+                van verkeer op de website, advertenties.
+            </p>
         </div>
         <div class="gdpr-consent__choice">
             <button class="gdpr-consent__button--accept">Ja, natuurlijk</button>
@@ -33,7 +36,9 @@
             <div class="personalia-person__info">
                 <h1 class="personalia-person__name">Teun van der Kleij</h1>
                 <p class="personalia-content__subtitle">
-                    Ik ben Teun van der Kleij. Als student aan de hogeschool Windesheim ben ik in opleiding om software engineer te worden.
+                    Als student aan de hogeschool Windesheim ben ik in opleiding om software engineer te worden. 
+                    Op het moment volg ik het semester Web Development in leerjaar 2. Om meer over mij te weten
+                    er een kort beschrijving van mij en de mogelijkheid om contact met mij op te nemen.
                 <p>
             </div>
         </div>
@@ -64,8 +69,8 @@
 
     <section class="profile">
         <nav class="profile-buttons">
-            <button class="profile-button profile-button__current">Profiel</button>
-            <button class="profile-button">Contacten</button>
+            <button class="profile-button profile-button__current" id="profile-button">Profiel</button>
+            <button class="profile-button" id="contact-form-button">Contacten</button>
         </nav>
         <section class="profile-content">
             <div class="profile-content__category">
@@ -120,6 +125,41 @@
             <div class="profile-content__element profile-content__element-header">
                     <h4 class="profile-content__title">Scrum</h4>
             </div>         
+        </section>
+        <section class="contact-form-content hide">
+            <div class="profile-content__category">
+                <h3 class="profile-content__category-title">Stuur mij een bericht</h3>
+                <hr>
+            </div>
+            <div class="contact-form-content__main">
+                <div class="contact-form-content__form">
+                    <form method="post" id="contact-form">
+                        <div class="form-names">
+                            <div class="form-input">
+                                <p class="input-title">Voornaam</p>
+                                <input type="text" required class="contact-form-content__form--input" id="contact-form__first-name" placeholder="Vul je voornaam in">
+                            </div>
+                            <div class="form-input">
+                                <p class="input-title">Achternaam</p>
+                                <input type="text" required class="contact-form-content__form--input" id="contact-form__last-name" placeholder="Vul je achternaam in">                    
+                            </div>
+                        </div>
+                        <div class="form-input">
+                            <p class="input-title">Telefoonnummer</p>
+                            <input type="number" required class="contact-form-content__form--input" id="contact-form__phone-number" placeholder="Vul je telefoonnummer in">
+                        </div>
+                        <div class="form-input">
+                            <p class="input-title">Email</p>
+                            <input type="email" required class="contact-form-content__form--input" id="contact-form__email" placeholder="Vul je email in">
+                        </div>
+                        <div class="form-input">
+                            <p class="input-title">Bericht</p>
+                            <textarea form="contact-form" required class="contact-form-content__form--input" id="contact-form__message" placeholder="Vul hier je bericht in"></textarea>
+                        </div>
+                        <button disabled type="submit" class="form-submit" id="contact-form__submit">Versturen</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </section>
 </div>

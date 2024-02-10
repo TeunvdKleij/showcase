@@ -20,17 +20,17 @@ class CurrentSelected{
             
         if(sectionName === 'profile'){
             document.querySelector(`#profile-button`).classList.add('profile-button__current');
-            document.querySelector('.profile-content').classList.remove('hide');
-            document.querySelector('.profile-content').classList.add('show');
-            document.querySelector('.contact-form-content').classList.add('hide');
-            document.querySelector('.contact-form-content').classList.remove('show');
+            document.querySelector('.profile__content').classList.remove('hide');
+            document.querySelector('.profile__content').classList.add('show');
+            document.querySelector('.contact-form').classList.add('hide');
+            document.querySelector('.contact-form').classList.remove('show');
         }
         else if(sectionName === 'contactForm'){
             document.querySelector(`#contact-form-button`).classList.add('profile-button__current');
-            document.querySelector('.profile-content').classList.add('hide');
-            document.querySelector('.profile-content').classList.remove('show');
-            document.querySelector('.contact-form-content').classList.remove('hide');
-            document.querySelector('.contact-form-content').classList.add('show');
+            document.querySelector('.profile__content').classList.add('hide');
+            document.querySelector('.profile__content').classList.remove('show');
+            document.querySelector('.contact-form').classList.remove('hide');
+            document.querySelector('.contact-form').classList.add('show');
 
         }
     }

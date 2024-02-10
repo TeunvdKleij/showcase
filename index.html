@@ -5,157 +5,153 @@
     <title>CV Teun van der Kleij</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script defer src="javascript/gdpr.js"></script>
+    <script defer src="javascript/cookie.js"></script>
     <script defer src="javascript/currectSelected.js"></script>
 </head>
 <body>
-    <div class="container hide">
-    <section class="gdpr-consent-form hide">
-        <div class="gdpr-consent__description">
-            <p>
-                Deze website gebruikt cookies.
-                We gebruiken cookies om content te personaliseren, voor social media en het analyseren
-                van verkeer op de website, advertenties.
-            </p>
-        </div>
-        <div class="gdpr-consent__choice">
-            <button class="gdpr-consent__button--accept">Ja, natuurlijk</button>
-            <button class="gdpr-consent__button--reject">Neu, misschien later</button>
-        </div>
-    </section>
+    <div class="cookie-container hide">
+        <section class="cookie-consent-form hide">
+            <div class="cookie-consent-form__description">
+                <p>
+                    Deze website gebruikt cookies.
+                    We gebruiken cookies om content te personaliseren, voor social media en het analyseren
+                    van verkeer op de website, advertenties.
+                </p>
+            </div>
+            <div class="cookie-consent-form__button">
+                <button class="cookie-consent-form__button--accept">Ja, natuurlijk</button>
+                <button class="gdpr-consent-form__button--reject">Neu, misschien later</button>
+            </div>
+        </section>
     </div>
-    <div class="page">
+    <div class="main">
         <section class="personalia">
-            <div class="personalia-person">
-                <div class="personalia-person__photo">
-                    <img class="personalia-person__photo--logo" src="images/profile_picture.jpg" alt="Person logo">
-                </div>
-                <div class="personalia-person__info">
-                    <h1 class="personalia-person__name">Teun van der Kleij</h1>
-                    <p class="personalia-content__subtitle">
+            <div class="personalia__personal">
+                <img class="personal__photo" src="images/profile_picture.jpg" alt="Foto">
+                <div class="personal__info">
+                    <h1 class="personal__info--name">Teun van der Kleij</h1>
+                    <p class="personal__info--about-me">
                         Als student aan de hogeschool Windesheim ben ik in opleiding om software engineer te worden. 
                         Op het moment volg ik het semester Web Development in leerjaar 2. Om meer over mij te weten
                         er een kort beschrijving van mij en de mogelijkheid om contact met mij op te nemen.
                     <p>
                 </div>
             </div>
-            <div class="personalia-contact-info">
-                <h1 class="personalia-contact-info__title">Contact info</h1>
-                <div class="personalia-contact-info__options">
-                    <div class="personalia-contact-info__option">
-                        <div class="personalia-contact-info__option--icon">
+            <div class="personalia__contact-info">
+                <h1 class="contact-info__title">Contact info</h1>
+                <div class="contact-info__options">
+                    <div class="contact-info__option">
+                        <div class="contact-info__option--icon">
                             <img src="images/mail.png">
                         </div>
-                        <p class="personalia-content__subtitle">teunvanderkleij@gmail.com</p>
+                        <p class="contact-info__text">teunvanderkleij@gmail.com</p>
                     </div>
-                    <div class="personalia-contact-info__option">
-                        <div class="personalia-contact-info__option--icon">
+                    <div class="contact-info__option">
+                        <div class="contact-info__option--icon">
                             <img src="images/linkedin.png">
                         </div>
-                        <a class="personalia-content__subtitle" href="https://www.linkedin.com/in/teun-van-der-kleij-9b805a258" id="linkedInHref">www.linkedin.com/in/teun-van-der-kleij-9b805a258</a>
+                        <a class="contact-info__text" href="https://www.linkedin.com/in/teun-van-der-kleij-9b805a258" id="linkedInHref">www.linkedin.com/in/teun-van-der-kleij-9b805a258</a>
                     </div>
-                    <div class="personalia-contact-info__option">
-                        <div class="personalia-contact-info__option--icon">
+                    <div class="contact-info__option">
+                        <div class="contact-info__option--icon">
                             <img src="images/telephone.png">
                         </div>
-                        <p class="personalia-content__subtitle">(+31) 6 38 44 46 37</p>
+                        <p class="contact-info__text">(+31) 6 38 44 46 37</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="profile">
-            <nav class="profile-buttons">
-                <button class="profile-button profile-button__current" id="profile-button">Profiel</button>
-                <button class="profile-button" id="contact-form-button">Contacten</button>
+            <nav class="profile__buttons">
+                <button class="profile__button profile__button--current" id="profile-button">Profiel</button>
+                <button class="profile__button" id="contact-form-button">Contacten</button>
             </nav>
-            <section class="profile-content">
-                <div class="profile-content__category">
-                    <h3 class="profile-content__category-title">Opleidingen</h3>
+            <section class="profile__content">
+                <div>
+                    <h3 class="category-title">Opleidingen</h3>
                     <hr>
                 </div>
-                <div class="profile-content__element">
-                    <div class="profile-content__element-header">
-                        <h4 class="profile-content__title">HBO-ICT</h4>
-                        <p class="profile-content__period">September 2022 - Juli 2026</p>
+                <div class="profile__content--element">
+                    <div class="profile__content--element__header">
+                        <h4 class="profile__content--element__title">HBO-ICT</h4>
+                        <p class="profile__content--element__period">September 2022 - Juli 2026</p>
                     </div>
-                    <p class="profile-content__institute">Hogeschool Windesheim, Zwolle</p>
+                    <p class="profile__content--institute">Hogeschool Windesheim, Zwolle</p>
                 </div>
-                <div class="profile-content__element">
-                    <div class="profile-content__element-header">
-                        <h4 class="profile-content__title">VWO</h4>
-                        <p class="profile-content__period">September 2015 - Juli 2021</p>
+                <div class="profile__content--element">
+                    <div class="profile__content--element__header">
+                        <h4 class="profile__content--element__title">VWO</h4>
+                        <p class="profile__content--element__period">September 2015 - Juli 2021</p>
                     </div>
-                    <p class="profile-content__institute">Het Stedelijk Zutphen, Zutphen</p>
+                    <p class="profile__content--institute">Het Stedelijk Zutphen, Zutphen</p>
                 </div>
-                <div class="profile-content__category">
-                    <h3 class="profile-content__category-title">Werkervaring</h3>
+                <div>
+                    <h3 class="category-title">Werkervaring</h3>
                     <hr>
                 </div>
-                <div class="profile-content__element">
-                    <div class="profile-content__element-header">
-                        <h4 class="profile-content__title">Student assistent</h4>
-                        <p class="profile-content__period">Februari 2024 - Heden</p>
+                <div class="profile__content--element">
+                    <div class="profile__content--element__header">
+                        <h4 class="profile__content--element__title">Student assistent</h4>
+                        <p class="profile__content--element__period">Februari 2024 - Heden</p>
                     </div>
-                    <p class="profile-content__institute">Hogeschool Windesheim, Zwolle</p>
+                    <p class="profile__content--institute">Hogeschool Windesheim, Zwolle</p>
                 </div>
-                <div class="profile-content__element">
-                    <div class="profile-content__element-header">
-                        <h4 class="profile-content__title">Teaching assistant</h4>
-                        <p class="profile-content__period">September 2023 - Januari 2024</p>
+                <div class="profile__content--element">
+                    <div class="profile__content--element__header">
+                        <h4 class="profile__content--element__title">Teaching assistant</h4>
+                        <p class="profile__content--element__period">September 2023 - Januari 2024</p>
                     </div>
-                    <p class="profile-content__institute">Hogeschool Windesheim, Zwolle</p>
+                    <p class="profile__content--institute">Hogeschool Windesheim, Zwolle</p>
                 </div>
-                <div class="profile-content__category">
-                    <h3 class="profile-content__category-title">Vaardigheden</h3>
+                <div>
+                    <h3 class="category-title">Vaardigheden</h3>
                     <hr>
                 </div>
-                <div class="profile-content__element profile-content__element-header">
-                    <h4 class="profile-content__title">Java</h4>
+                <div class="profile__content--element profile__content--element__header">
+                    <h4 class="profile__content--element__title">Java</h4>
                 </div>
-                <div class="profile-content__element profile-content__element-header">
-                    <h4 class="profile-content__title">C#</h4>
+                <div class="profile__content--element profile__content--element__header">
+                    <h4 class="profile__content--element__title">C#</h4>
                 </div>
-                <div class="profile-content__element profile-content__element-header">
-                    <h4 class="profile-content__title">PHP</h4>  
+                <div class="profile__content--element profile__content--element__header">
+                    <h4 class="profile__content--element__title">PHP</h4>
                 </div>
-                <div class="profile-content__element profile-content__element-header">
-                        <h4 class="profile-content__title">Scrum</h4>
+                <div class="profile__content--element profile__content--element__header">
+                        <h4 class="profile__content--element__title">Scrum</h4>
                 </div>         
             </section>
-            <section class="contact-form-content hide">
-                <div class="profile-content__category">
-                    <h3 class="profile-content__category-title">Stuur mij een bericht</h3>
+            <section class="contact-form hide">
+                <div>
+                    <h3 class="category-title">Stuur mij een bericht</h3>
                     <hr>
                 </div>
-                <div class="contact-form-content__main">
-                    <div class="contact-form-content__form">
-                        <form method="post" id="contact-form">
-                            <div class="form-names">
-                                <div class="form-input">
-                                    <p class="input-title">Voornaam</p>
-                                    <input type="text" required class="contact-form-content__form--input" id="contact-form__first-name" placeholder="Vul je voornaam in">
-                                </div>
-                                <div class="form-input">
-                                    <p class="input-title">Achternaam</p>
-                                    <input type="text" required class="contact-form-content__form--input" id="contact-form__last-name" placeholder="Vul je achternaam in">                    
-                                </div>
+                <div class="contact-form">
+                    <form method="post" class="contact-form__form" id="contact-form">
+                        <div class="form__names">
+                            <div class="form__input">
+                                <p class="form__input--title">Voornaam</p>
+                                <input type="text" required class="form__input--textfield" id="contact-form__first-name" placeholder="Vul je voornaam in">
                             </div>
-                            <div class="form-input">
-                                <p class="input-title">Telefoonnummer</p>
-                                <input type="number" required class="contact-form-content__form--input" id="contact-form__phone-number" placeholder="Vul je telefoonnummer in">
+                            <div class="form__input">
+                                <p class="form__input--title">Achternaam</p>
+                                <input type="text" required class="form__input--textfield" id="contact-form__last-name" placeholder="Vul je achternaam in">
                             </div>
-                            <div class="form-input">
-                                <p class="input-title">Email</p>
-                                <input type="email" required class="contact-form-content__form--input" id="contact-form__email" placeholder="Vul je email in">
-                            </div>
-                            <div class="form-input">
-                                <p class="input-title">Bericht</p>
-                                <textarea form="contact-form" required class="contact-form-content__form--input" id="contact-form__message" placeholder="Vul hier je bericht in"></textarea>
-                            </div>
-                            <button disabled type="submit" class="form-submit" id="contact-form__submit">Versturen</button>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form__input">
+                            <p class="form__input--title">Telefoonnummer</p>
+                            <input type="number" required class="form__input--textfield" id="contact-form__phone-number" placeholder="Vul je telefoonnummer in">
+                        </div>
+                        <div class="form__input">
+                            <p class="form__input--title">Email</p>
+                            <input type="email" required class="form__input--textfield" id="contact-form__email" placeholder="Vul je email in">
+                        </div>
+                        <div class="form__input">
+                            <p class="form__input--title">Bericht</p>
+                            <textarea form="contact-form" class="form__input--textfield" id="contact-form__message" placeholder="Vul hier je bericht in"></textarea>
+                        </div>
+                        <button disabled type="submit" class="form__submit" id="contact-form__submit">Versturen</button>
+                    </form>
                 </div>
             </section>
         </section>

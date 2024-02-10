@@ -9,41 +9,36 @@
     justify-content: center;
     color: white;
 }
-.personalia-person{
+.personalia__personal{
     display: flex;
     justify-content: center;
 }
-.personalia-person__name{
-    margin-bottom: 0;
-}
-.personalia-person__photo{
+.personal__photo {
     display: flex;
     box-sizing: border-box;
-    margin-left: 20px;
+    border-radius: 50%;
+    width: 20vh;
+    object-fit: cover;
+    height: 20vh;
+    animation: glow 3s ease alternate;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+    margin: 10px 0;
 }
-.personalia-person__info{
+.personal__info{
     display: flex;
     flex-flow: column;
     width: 60%;
     box-sizing: border-box;
     margin: 0 20px;
 }
-.personalia-person__photo--logo {
-    border-radius: 50%;
-    margin: 15px 0px;
-    width: 20vh;
-    object-fit: cover;
-    height: 20vh;
-    animation: glow 3s ease alternate;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
-    margin-bottom: 10px;
-
+.personal__info--name{
+    margin-bottom: 0;
 }
-.personalia-content__subtitle{
+.personal__info--about-me{
     font-size: 14px;
     color: white;
 }
-.personalia-contact-info{
+.personalia__contact-info{
     border-radius: 16px;
     background-color: rgba(203, 228, 232, 0.25);
     box-shadow: 2px 2px 20px 2px rgba(0,0,0,0.5);
@@ -52,12 +47,12 @@
     margin: 35px 10px;
     max-width: 90vw;
 }
-.personalia-contact-info__title{
+.contact-info__title{
     display: flex;
     justify-content: center;
     margin-bottom: 0;
 }
-.personalia-contact-info__options{
+.contact-info__options{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -65,7 +60,7 @@
     padding: 20px;
     box-sizing: border-box;
 }
-.personalia-contact-info__option{
+.contact-info__option{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,19 +68,23 @@
     width: 100%;
     justify-content: flex-start;
 }
-.personalia-contact-info__option--icon{
+.contact-info__option--icon{
     width: 30px;
     height: 30px;
     background-color: dodgerblue;
     border-radius: 20%;
 }
 
-.personalia-contact-info__option--icon img{
+.contact-info__option--icon img{
     width: 100%;
     height: 100%;
     padding: 5px;
     box-sizing: border-box;
     filter: invert(100%);
+}
+.contact-info__text{
+    font-size: 14px;
+    color: white;
 }
 #linkedInHref{
     text-decoration: none;

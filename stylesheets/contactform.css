@@ -1,36 +1,31 @@
-.contact-form-content{
-    font-size: 20px;
-} 
-.contact-form-content__main{
- 
+.contact-form{
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
 }
-.contact-form-content__form{
+.contact-form__form{
     width: 100%;
 }
-.input-title{
+.form__names{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form__input{
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.form__input--title{
     margin: 10px 0;
 } 
-.contact-form-content__form--input{
+.form__input--textfield{
     display: flex;
     margin: 10px 0;
     border-radius: 3px;
     border: 1px solid gray;
     height: 20px;
-    font-family: Arial;
-
+    font-family: Arial, serif;
 }
-.form-names{
-    display: flex;
-    flex-wrap: wrap;
-}
-.form-input{
-    box-sizing: border-box;
-    padding: 0 10px;
-}
-.form-submit{
+.form__submit{
     box-sizing: border-box;
     margin: 0 10px;
 }
@@ -42,7 +37,6 @@
 }
 #contact-form__submit{
     background-color: dodgerblue;
-    border: none;
     color: white;
     margin-top: 10px;
     font-size: 16px;

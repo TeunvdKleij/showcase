@@ -1,5 +1,5 @@
 /*mobile version*/
-@import "gdpr.css";
+@import "cookie.css";
 @import "personalia.css";
 @import "profile.css";
 @import "contactform.css";
@@ -28,15 +28,26 @@ body{
     padding: 0;
     height: 100vh;
 }
-.page {
+.main {
     display: flex;
     flex-direction: column;
-    font-family: Arial;
+    font-family: Arial, serif;
     height: 100%;
 }
+.category-title {
+    color: rgba(39, 71, 140, 0.96);
+    margin: 10px 0;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
 
 @media only screen and (min-width: 800px) {
-    .page {
+    .main {
         flex-direction: row;
     }
     .profile-content__category--hidden-mobile{
@@ -49,11 +60,11 @@ body{
     .profile-content__element--hidden-mobile {
         display: flex;
     }
-    .profile-content__element-header{
+    .profile__content--element__header{
         display: flex;
         justify-content: space-between;
     }
-    .profile-content__period {
+    .profile__content--element__period {
         font-size: 12px;
         color: #5c6166;
         display: flex;

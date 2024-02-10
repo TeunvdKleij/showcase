@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.profile-buttons{
+.profile__buttons{
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -19,76 +19,52 @@
     border-radius: 8px;
     overflow: hidden;
 }
-.profile-button{
+.profile__button{
     padding: 10px;
     box-sizing: border-box;
     flex-grow: 1;
     border: 0;  
 } 
-.profile-button:hover{
+.profile__button:hover{
     cursor: pointer;
     filter: brightness(90%); 
 }
-.profile-button__current{
+.profile__button--current{
     background-color: dodgerblue;
     color: white;
 }
-
-.profile-content {
+.profile__content {
     font-size: 20px;
     overflow-y: auto;
     max-height: 100%;
 }
-
-.profile-content__category-title {
-    color: rgba(39, 71, 140, 0.96);
-    margin: 10px 0;
-}
-
 .profile-content__category--hidden-mobile {
     display: none;
 }
-
-.profile-content__element {
+.profile__content--element {
     display: flex;
     flex-direction: column;
 }
-
 .profile-content__element--hidden-mobile {
     display: flex;
     flex-direction: column;
     display: none;
 }
-
-.profile-content__title {
+.profile__content--element__title {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 2px;
     margin-top: 6px;
-
 }
-.profile-content__title a{
-    text-decoration: none;
-    color: black;
-
-}
-.profile-content__period {
+.profile__content--element__period {
    font-size: 14px;
    color: gray;
 }
-
-.profile-content__subtitle {
-    font-size: 14px;
-    color: gray;
-}
-
-
-.profile-content__institute {
+.profile__content--institute {
     color: rgba(39, 71, 140, 0.96);
-    margin-top: 0px;
+    margin-top: 0;
     font-size: 14px;
 }
-
 @media only screen and (min-width: 800px) {
     .profile-content__category--hidden-mobile{
         display: flex;
@@ -100,11 +76,11 @@
     .profile-content__element--hidden-mobile {
         display: flex;
     }
-    .profile-content__element-header{
+    .profile__content--element__header{
         display: flex;
         justify-content: space-between;
     }
-    .profile-content__period {
+    .profile__content--element__period {
         font-size: 12px;
         color: #5c6166;
         display: flex;

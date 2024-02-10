@@ -1,4 +1,4 @@
-class GDPR {
+class Cookie {
 
     constructor() {
         this.bindEvents();
@@ -7,14 +7,14 @@ class GDPR {
     }
 
     bindEvents() {
-        let buttonAccept = document.querySelector('.gdpr-consent__button--accept');
+        let buttonAccept = document.querySelector('.cookie-consent-form__button--accept');
         buttonAccept.addEventListener('click', () => {
             this.cookieStatus('accept');
             this.hideGDPR();
      
             
         });
-        let buttonReject = document.querySelector('.gdpr-consent__button--reject');
+        let buttonReject = document.querySelector('.gdpr-consent-form__button--reject');
         buttonReject.addEventListener('click', () => {
             this.cookieStatus('reject');
             this.hideGDPR();
@@ -47,19 +47,19 @@ class GDPR {
 
     hideGDPR(){
         console.log('h3');
-        document.querySelector(`.gdpr-consent-form`).classList.add('hide');
-        document.querySelector(`.gdpr-consent-form`).classList.remove('show');
-        document.querySelector('.container').classList.add('hide');
-        document.querySelector('.container').classList.remove('show');
+        document.querySelector(`.cookie-consent-form`).classList.add('hide');
+        document.querySelector(`.cookie-consent-form`).classList.remove('show');
+        document.querySelector('.cookie-container').classList.add('hide');
+        document.querySelector('.cookie-container').classList.remove('show');
     }
 
     showGDPR(){
         console.log('h4');
-        document.querySelector(`.gdpr-consent-form`).classList.add('show');
-        document.querySelector('.container').classList.add('show');
+        document.querySelector(`.cookie-consent-form`).classList.add('show');
+        document.querySelector('.cookie-container').classList.add('show');
         
     }
 
 }
 
-const gdpr = new GDPR();
+const cookie = new Cookie();

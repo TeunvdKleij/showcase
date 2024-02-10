@@ -132,7 +132,7 @@ body{
     box-shadow: 2px 2px 20px 7px rgba(0,0,0,0.5);
     width: 100%;
     padding: 25px;
-    overflow: auto;
+    box-sizing: border-box;
 }
 
 .profile-buttons{
@@ -147,7 +147,6 @@ body{
     gap: 5px;
     border-radius: 8px;
     overflow: hidden;
-
 }
 .profile-button{
     padding: 10px;
@@ -166,9 +165,8 @@ body{
 
 .profile-content {
     font-size: 20px;
-    max-height: 100vh;
-    box-sizing: border-box;
-
+    overflow-y: auto;
+    max-height: 100%;
 }
 
 .profile-content__category-title {

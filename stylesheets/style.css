@@ -1,5 +1,24 @@
 /*mobile version*/
 @import "gdpr.css";
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 body{
     margin: 0;
     padding: 0;
@@ -113,7 +132,7 @@ body{
     box-shadow: 2px 2px 20px 7px rgba(0,0,0,0.5);
     width: 100%;
     padding: 25px;
-    box-sizing: border-box;
+    overflow: auto;
 }
 
 .profile-buttons{
@@ -128,6 +147,7 @@ body{
     gap: 5px;
     border-radius: 8px;
     overflow: hidden;
+
 }
 .profile-button{
     padding: 10px;
@@ -146,8 +166,9 @@ body{
 
 .profile-content {
     font-size: 20px;
-    overflow-y: auto;
-    max-height: 100%;
+    max-height: 100vh;
+    box-sizing: border-box;
+
 }
 
 .profile-content__category-title {
@@ -219,6 +240,8 @@ body{
     border-radius: 3px;
     border: 1px solid gray;
     height: 20px;
+    font-family: Arial;
+
 }
 .form-names{
     display: flex;
@@ -235,7 +258,8 @@ body{
 #contact-form__message{
     width: 100%;
     min-height: 100px;
-    resize: vertical;
+    max-height: 250px;
+    resize: vertical; 
 }
 #contact-form__submit{
     background-color: dodgerblue;

@@ -47,15 +47,15 @@ class GDPR {
 
     hideGDPR(){
         console.log('h3');
-        document.querySelector(`.gdpr-consent`).classList.add('hide');
-        document.querySelector(`.gdpr-consent`).classList.remove('show');
+        document.querySelector(`.gdpr-consent-form`).classList.add('hide');
+        document.querySelector(`.gdpr-consent-form`).classList.remove('show');
         document.querySelector('.container').classList.add('hide');
         document.querySelector('.container').classList.remove('show');
     }
 
     showGDPR(){
         console.log('h4');
-        document.querySelector(`.gdpr-consent`).classList.add('show');
+        document.querySelector(`.gdpr-consent-form`).classList.add('show');
         document.querySelector('.container').classList.add('show');
         
     }

@@ -1,5 +1,9 @@
 /*mobile version*/
 @import "gdpr.css";
+@import "personalia.css";
+@import "profile.css";
+@import "contactform.css";
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -31,255 +35,6 @@ body{
     height: 100%;
 }
 
-.personalia {
-    background-image: linear-gradient(rgb(122, 186, 254), rgb(0, 11, 128));
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    color: white;
-}
-.personalia-person{
-    display: flex;
-    justify-content: center;
-}
-.personalia-person__name{
-    margin-bottom: 0;
-}
-.personalia-person__photo{
-    display: flex;
-    box-sizing: border-box;
-    margin-left: 20px;
-}
-.personalia-person__info{
-    display: flex;
-    flex-flow: column;
-    width: 60%;
-    box-sizing: border-box;
-    margin: 0 20px;
-}
-.personalia-person__photo--logo {
-    border-radius: 50%;
-    margin: 15px 0px;
-    width: 20vh;
-    object-fit: cover;
-    height: 20vh;
-    animation: glow 3s ease alternate;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
-    margin-bottom: 10px;
-
-}
-.personalia-content__subtitle{
-    font-size: 14px;
-    color: white;
-}
-.personalia-contact-info{
-    border-radius: 16px;
-    background-color: rgba(203, 228, 232, 0.25);
-    box-shadow: 2px 2px 20px 2px rgba(0,0,0,0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    margin: 35px 10px;
-    max-width: 90vw;
-}
-.personalia-contact-info > h1{
-    display: flex;
-    justify-content: center;
-}
-.personalia-contact-info__options{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.personalia-contact-info__option{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    justify-content: flex-start;
-}
-.personalia-contact-info__option--icon{
-    width: 30px;
-    height: 30px;
-    background-color: dodgerblue;
-    border-radius: 20%;
-}
-
-.personalia-contact-info__option--icon img{
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    filter: invert(100%);
-}
-#linkedInHref{
-    text-decoration: none;
-}
-#linkedInHref:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.profile {
-    background-color: #faf8f8;
-    box-shadow: 2px 2px 20px 7px rgba(0,0,0,0.5);
-    width: 100%;
-    padding: 25px;
-    box-sizing: border-box;
-}
-
-.profile-buttons{
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.profile-button{
-    padding: 10px;
-    box-sizing: border-box;
-    flex-grow: 1;
-    border: 0;  
-} 
-.profile-button:hover{
-    cursor: pointer;
-    filter: brightness(90%); 
-}
-.profile-button__current{
-    background-color: dodgerblue;
-    color: white;
-}
-
-.profile-content {
-    font-size: 20px;
-    overflow-y: auto;
-    max-height: 100%;
-}
-
-.profile-content__category-title {
-    color: rgba(39, 71, 140, 0.96);
-    margin: 10px 0;
-}
-
-.profile-content__category--hidden-mobile {
-    display: none;
-}
-
-.profile-content__element {
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-content__element--hidden-mobile {
-    display: flex;
-    flex-direction: column;
-    display: none;
-}
-
-.profile-content__title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 2px;
-    margin-top: 6px;
-
-}
-.profile-content__title a{
-    text-decoration: none;
-    color: black;
-
-}
-.profile-content__period {
-   font-size: 14px;
-   color: gray;
-}
-
-.profile-content__subtitle {
-    font-size: 14px;
-    color: gray;
-}
-
-
-.profile-content__institute {
-    color: rgba(39, 71, 140, 0.96);
-    margin-top: 0px;
-    font-size: 14px;
-}
-.contact-form-content{
-    font-size: 20px;
-} 
-.contact-form-content__main{
- 
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-}
-.contact-form-content__form{
-    width: 100%;
-}
-.input-title{
-    margin: 10px 0;
-} 
-.contact-form-content__form--input{
-    display: flex;
-    margin: 10px 0;
-    border-radius: 3px;
-    border: 1px solid gray;
-    height: 20px;
-    font-family: Arial;
-
-}
-.form-names{
-    display: flex;
-    flex-wrap: wrap;
-}
-.form-input{
-    box-sizing: border-box;
-    padding: 0 10px;
-}
-.form-submit{
-    box-sizing: border-box;
-    margin: 0 10px;
-}
-#contact-form__message{
-    width: 100%;
-    min-height: 100px;
-    max-height: 250px;
-    resize: vertical; 
-}
-#contact-form__submit{
-    background-color: dodgerblue;
-    border: none;
-    color: white;
-    margin-top: 10px;
-    font-size: 16px;
-    height: 35px;
-    border-radius: 5px;
-    border: 2px dodgerblue solid;
-}
-#contact-form__submit:hover{
-     filter: brightness(90%);
-}
-#contact-form__submit:active{
-    background-color: white;    
-    color: dodgerblue;
-}
-
-
-
-
 @media only screen and (min-width: 800px) {
     .page {
         flex-direction: row;
@@ -288,28 +43,20 @@ body{
         display: flex;
         flex-direction: column;
     }
-
-
-    /*fix: anders als stipje zichtbaar*/
     .profile-content__category--hidden-mobile hr{
         width: 100%;
     }
-
     .profile-content__element--hidden-mobile {
         display: flex;
     }
-
     .profile-content__element-header{
         display: flex;
         justify-content: space-between;
     }
-
     .profile-content__period {
         font-size: 12px;
         color: #5c6166;
         display: flex;
     }
-
-
 }
 

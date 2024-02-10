@@ -1,0 +1,59 @@
+.contact-form-content{
+    font-size: 20px;
+} 
+.contact-form-content__main{
+ 
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.contact-form-content__form{
+    width: 100%;
+}
+.input-title{
+    margin: 10px 0;
+} 
+.contact-form-content__form--input{
+    display: flex;
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px solid gray;
+    height: 20px;
+    font-family: Arial;
+
+}
+.form-names{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-input{
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.form-submit{
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+#contact-form__message{
+    width: 100%;
+    min-height: 100px;
+    max-height: 250px;
+    resize: vertical; 
+}
+#contact-form__submit{
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px dodgerblue solid;
+}
+#contact-form__submit:hover{
+     filter: brightness(90%);
+}
+#contact-form__submit:active{
+    background-color: white;    
+    color: dodgerblue;
+}

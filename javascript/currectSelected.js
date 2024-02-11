@@ -15,18 +15,18 @@ class CurrentSelected{
         });
     }
     showSection(sectionName){
-        document.querySelector(`#profile-button`).classList.remove('profile-button__current');
-        document.querySelector(`#contact-form-button`).classList.remove('profile-button__current');
+        document.querySelector(`#profile-button`).classList.remove('profile__button--current');
+        document.querySelector(`#contact-form-button`).classList.remove('profile__button--current');
             
         if(sectionName === 'profile'){
-            document.querySelector(`#profile-button`).classList.add('profile-button__current');
+            document.querySelector(`#profile-button`).classList.add('profile__button--current');
             document.querySelector('.profile__content').classList.remove('hide');
             document.querySelector('.profile__content').classList.add('show');
             document.querySelector('.contact-form').classList.add('hide');
             document.querySelector('.contact-form').classList.remove('show');
         }
         else if(sectionName === 'contactForm'){
-            document.querySelector(`#contact-form-button`).classList.add('profile-button__current');
+            document.querySelector(`#contact-form-button`).classList.add('profile__button--current');
             document.querySelector('.profile__content').classList.add('hide');
             document.querySelector('.profile__content').classList.remove('show');
             document.querySelector('.contact-form').classList.remove('hide');

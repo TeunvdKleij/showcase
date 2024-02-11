@@ -6,7 +6,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Track */
@@ -46,7 +46,7 @@ body{
 }
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 860px) {
     .main {
         flex-direction: row;
     }

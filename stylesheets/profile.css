@@ -36,7 +36,7 @@
 .profile__content {
     font-size: 20px;
     overflow-y: auto;
-    max-height: 100%;
+    max-height: calc(100% - 35px);
 }
 .profile-content__category--hidden-mobile {
     display: none;

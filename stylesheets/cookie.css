@@ -49,12 +49,16 @@
     background-color: dodgerblue;
     color: white;
     padding: 10px;
-    border-radius: 10px;
-    border: 2px solid rgb(16, 119, 223);
+    border-radius: 5px;
+    border: 2px dodgerblue solid;
 }
 
-.cookie-consent-form__button--accept:hover {
-    background-color: rgb(16, 119, 223);
+.cookie-consent-form__button--accept:hover{
+     filter: brightness(90%);
+}
+.cookie-consent-form__button--accept:active{
+    background-color: white;    
+    color: dodgerblue;
 }
 
 .cookie-consent-form__button--reject {

@@ -23,6 +23,17 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+
+:root{
+    --background-color-main: white;
+}
+@media (prefers-color-scheme: dark){
+    :root{
+        --background-color-main: red;
+    }
+}
+
 body{
     margin: 0;
     padding: 0;

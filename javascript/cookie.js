@@ -3,7 +3,6 @@ class Cookie {
     constructor() {
         this.bindEvents();
         if(this.cookieStatus() !== 'accept') this.showGDPR();
-        console.log('h1');
     }
 
     bindEvents() {
@@ -26,7 +25,6 @@ class Cookie {
     
 
     cookieStatus(status) {
-        console.log('h2');
         let date = new Date();
         let metadata = {
             datum: date.getDate() + "-" + date.getMonth()+1 + "-" + date.getFullYear(),
@@ -46,7 +44,6 @@ class Cookie {
 
 
     hideGDPR(){
-        console.log('h3');
         document.querySelector(`.cookie-consent-form`).classList.add('hide');
         document.querySelector(`.cookie-consent-form`).classList.remove('show');
         document.querySelector('.cookies-container').classList.add('hide');
@@ -54,7 +51,6 @@ class Cookie {
     }
 
     showGDPR(){
-        console.log('h4');
         document.querySelector(`.cookie-consent-form`).classList.add('show');
         document.querySelector('.cookies-container').classList.add('show');
         

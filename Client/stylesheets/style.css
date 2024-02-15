@@ -10,7 +10,7 @@
 }
 @media (prefers-color-scheme: dark){
     :root{
-        --background-color-main: r;
+        --background-color-main: red;
     }
 }
 
@@ -24,6 +24,7 @@ body{
     flex-direction: column;
     font-family: Arial, serif;
     height: 100%;
+    overflow-x: hidden;
 }
 .category-title {
     color: rgba(39, 71, 140, 0.96);
@@ -35,7 +36,9 @@ body{
 .show{
     display: block;
 }
+@media only screen and (min-width: 900px){
 
+}
 
 @media only screen and (min-width: 860px) {
     .main {

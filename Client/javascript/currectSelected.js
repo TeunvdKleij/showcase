@@ -24,6 +24,7 @@ class CurrentSelected{
             document.querySelector('.profile__content').classList.add('show');
             document.querySelector('.contact-form').classList.add('hide');
             document.querySelector('.contact-form').classList.remove('show');
+
         }
         else if(sectionName === 'contactForm'){
             document.querySelector(`#contact-form-button`).classList.add('profile__button--current');

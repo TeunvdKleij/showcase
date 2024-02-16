@@ -25,7 +25,7 @@ namespace ServerShowcase.Controllers
 
             return SendMail(mailContact);
         }
-        doe cors 
+        //doe cors 
         private IActionResult SendMail(MailContactModel mailContact)
         {
             MimeMessage mail = new MimeMessage();

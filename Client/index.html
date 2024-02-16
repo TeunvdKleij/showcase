@@ -133,14 +133,14 @@
                         <div class="form__names">
                             <div class="form__input">
                                 <label class="form__input--title-text">
-                                    <p class="form__input--title">Voornaam<span class="required-field">*</span></p>
+                                    <p class="form__input--title">Voornaam<span class="color-red">*</span></p>
                                     <p class="form__input--textarea__char-count" id="char-count__first-name">0/60</p>
                                 </label>
                                 <input type="text" name="first-name" maxlength="60" required class="form__input--textfield" id="contact-form__first-name" placeholder="Voornaam">
                             </div>
                             <div class="form__input">
                                 <label class="form__input--title-text">
-                                    <p class="form__input--title">Achternaam<span class="required-field">*</span></p>
+                                    <p class="form__input--title">Achternaam<span class="color-red">*</span></p>
                                     <p class="form__input--textarea__char-count" id="char-count__last-name">0/60</p>
                                 </label>
                                 <input type="text" name="last-name" maxlength="60" required class="form__input--textfield" id="contact-form__last-name" placeholder="Achternaam">
@@ -149,7 +149,7 @@
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
-                                <p class="form__input--title">Telefoonnummer<span class="required-field">*</span></p>
+                                <p class="form__input--title">Telefoonnummer<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__phone-number">0/20</p>
                             </label>
                             <input type="tel" name="phone-number" maxlength="20" required class="form__input--textfield" id="contact-form__phone-number" placeholder="Telefoonnummer">
@@ -157,26 +157,29 @@
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
-                                <p class="form__input--title">Email<span class="required-field">*</span></p>
+                                <p class="form__input--title">Email<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__email">0/80</p>
                             </label>
                             <input type="email" name="email" maxlength="80" required class="form__input--textfield" id="contact-form__email" placeholder="Email">
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
-                                <p class="form__input--title">Onderwerp<span class="required-field">*</span></p>
+                                <p class="form__input--title">Onderwerp<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__subject">0/200</p>
                             </label>
                             <input type="text" name="subject" maxlength="200" required class="form__input--textfield" id="contact-form__subject" placeholder="Onderwerp">
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
-                                <p class="form__input--title">Bericht<span class="required-field">*</span></p>
+                                <p class="form__input--title">Bericht<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__message">0/600</p>
                             </label>
                             <textarea maxlength="600" name="message" required form="contact-form" class="form__input--textfield" id="contact-form__message" placeholder="Bericht"></textarea>
                         </div>
-                        <button type="submit" class="form__submit" id="contact-form__submit">Versturen</button>
+                        <div class="form__submit">
+                            <p class="form__submit--message" id="submit-message"></p>
+                            <button type="submit" id="contact-form__submit">Versturen</button>
+                        </div>
                     </form>
                 </div>
             </section>

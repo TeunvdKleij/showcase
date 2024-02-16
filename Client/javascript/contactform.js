@@ -19,6 +19,7 @@ function replaceHtmlTags(text){
 document.getElementById('contact-form').addEventListener('submit', (event) => {
     event.preventDefault();
     let inputs = event.target.elements;
+    let wrongInput = false;
     for(let i = 0; i < inputs.length-1; i++){
         let inputValue = inputs[i].value;
         let inputType = inputs[i].type
@@ -27,11 +28,15 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
         if(inputType === "email"){
             if(inputValue.length > 80){
                 document.getElementById('contact-form__email').classList.add('contact-form__input--red');
+                console.log("Email is too long");
+                wrongInput = true;
             }
         }
         else if(inputType === "phone-number"){
             if(inputValue.length > 20){
                 document.getElementById('contact-form__phone-number').classList.add('contact-form__input--red');
+                console.log("Phone number is too long");
+                wrongInput = true;
             }
         }
         else{
@@ -39,28 +44,47 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
             if(inputType === "message"){
                 if(inputValue.length > 600){
                     document.getElementById('contact-form__message').classList.add('contact-form__input--red');
+                    console.log("Message is too long");
+                    wrongInput = true;
                 }
             }
             else if(inputType === "text"){
                 if(inputName === "first-name"){
                     if(inputValue.length > 60){
                         document.getElementById('contact-form__first-name').classList.add('contact-form__input--red');
+                        console.log("First name is too long");
+                        wrongInput = true;
                     }
                 }
                 else if(inputName === "last-name"){
                     if(inputValue.length > 60){
                         document.getElementById('contact-form__last-name').classList.add('contact-form__input--red');
+                        console.log("Last name is too long");
+                        wrongInput = true;
                     }
                 }
                 else if(inputName === "subject"){
                     if(inputValue.length > 200){
                         document.getElementById('contact-form__subject').classList.add('contact-form__input--red');
+                        console.log("Subject is too long");
+                        wrongInput = true;
                     }
                 }
             }
         }
 
     }
+    if(wrongInput){
+        document.getElementById('submit-message').classList.add('color-red');
+        document.getElementById('submit-message').classList.remove('color-green');
+        document.getElementById('submit-message').textContent = "Het bericht is niet verstuurd";
+    }
+    else{
+        document.getElementById('submit-message').classList.remove('color-red');
+        document.getElementById('submit-message').classList.add('color-green');
+        document.getElementById('submit-message').textContent = "Het bericht is verstuurd";
+    }
+    //show message of failed send
 })
 
 function getMaxLengthFromInputValue(name){

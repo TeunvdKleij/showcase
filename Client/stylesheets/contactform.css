@@ -5,9 +5,6 @@
     max-height: calc(100% - 35px);
     overflow-y: auto;
 }
-.contact-message{
-
-}
 .contact-form__form{
     width: 100%;
 }
@@ -47,11 +44,14 @@
     width: 100%;
 }
 .form__submit{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     margin: 0 10px;
 }
-.required-field{
-    color: red;
+.form__submit--message{
+    font-size: 16px;
 }
 #contact-form__message{
     width: 100%;

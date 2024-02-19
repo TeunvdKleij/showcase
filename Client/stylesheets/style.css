@@ -29,6 +29,7 @@ body{
 .category-title {
     color: rgba(39, 71, 140, 0.96);
     margin: 10px 0;
+    font-size: 20px;
 }
 .hide{
     display: none;

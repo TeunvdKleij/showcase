@@ -46,17 +46,14 @@ class Cookie {
 
     hideGDPR(){
         document.querySelector(`.cookie-consent-form`).classList.add('cookies-container__hide');
-        //document.querySelector(`.cookie-consent-form`).classList.remove('show');
+
         document.querySelector(`.cookie-consent-form`).classList.remove('cookies-container__show');
         document.querySelector('.cookies-container').classList.add('cookies-container__hide');
-        //document.querySelector('.cookies-container').classList.remove('show');
         document.querySelector(`.cookies-container`).classList.remove('cookies-container__show');
     }
 
     showGDPR(){
-       // document.querySelector(`.cookie-consent-form`).classList.add('show');
         document.querySelector(`.cookie-consent-form`).classList.add('cookies-container__show');
-        //document.querySelector('.cookies-container').classList.add('show');
         document.querySelector('.cookies-container').classList.add('cookies-container__show');
         
     }

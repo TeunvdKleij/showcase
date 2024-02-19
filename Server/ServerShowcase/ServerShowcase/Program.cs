@@ -10,9 +10,9 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins("http://localhost:5501")
+            .WithOrigins("http://127.0.0.1:5501")
             .WithOrigins("https://showcase-b2q.pages.dev")
-            .WithMethods("GET")
             .WithMethods("POST")
             .AllowAnyHeader();
         });

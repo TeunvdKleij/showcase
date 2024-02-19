@@ -16,56 +16,58 @@ function replaceHtmlTags(text){
         .replace(/&/g, "&amp;")
 }
 
-document.getElementById('contact-form').addEventListener('submit', (event) => {
+document.getElementById('contact-form').addEventListener('submit', async (event) => {
     event.preventDefault();
     let inputs = event.target.elements;
     let wrongInput = false;
+    let data = {};
     for(let i = 0; i < inputs.length-1; i++){
         let inputValue = inputs[i].value;
         let inputType = inputs[i].type
         let inputName = inputs[i].name;
+        data[inputName] = inputValue;
         replaceHtmlTags(inputValue)
-        if(inputType === "email"){
+        if(inputType === "Email"){
             if(inputValue.length > 80){
-                document.getElementById('contact-form__email').classList.add('contact-form__input--red');
+                document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
                 console.log("Email is too long");
                 wrongInput = true;
             }
         }
-        else if(inputType === "phone-number"){
+        else if(inputType === "PhoneNumber"){
             if(inputValue.length > 20){
-                document.getElementById('contact-form__phone-number').classList.add('contact-form__input--red');
+                document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
                 console.log("Phone number is too long");
                 wrongInput = true;
             }
         }
         else{
             replaceHtmlTags(inputValue)
-            if(inputType === "message"){
+            if(inputType === "Message"){
                 if(inputValue.length > 600){
-                    document.getElementById('contact-form__message').classList.add('contact-form__input--red');
+                    document.getElementById('contact-form__Message').classList.add('contact-form__input--red');
                     console.log("Message is too long");
                     wrongInput = true;
                 }
             }
             else if(inputType === "text"){
-                if(inputName === "first-name"){
+                if(inputName === "FirstName"){
                     if(inputValue.length > 60){
-                        document.getElementById('contact-form__first-name').classList.add('contact-form__input--red');
+                        document.getElementById('contact-form__FirstName').classList.add('contact-form__input--red');
                         console.log("First name is too long");
                         wrongInput = true;
                     }
                 }
-                else if(inputName === "last-name"){
+                else if(inputName === "LastName"){
                     if(inputValue.length > 60){
-                        document.getElementById('contact-form__last-name').classList.add('contact-form__input--red');
+                        document.getElementById('contact-form__LastName').classList.add('contact-form__input--red');
                         console.log("Last name is too long");
                         wrongInput = true;
                     }
                 }
-                else if(inputName === "subject"){
+                else if(inputName === "Subject"){
                     if(inputValue.length > 200){
-                        document.getElementById('contact-form__subject').classList.add('contact-form__input--red');
+                        document.getElementById('contact-form__Subject').classList.add('contact-form__input--red');
                         console.log("Subject is too long");
                         wrongInput = true;
                     }
@@ -74,26 +76,42 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
         }
 
     }
-    if(wrongInput){
-        document.getElementById('submit-message').classList.add('color-red');
-        document.getElementById('submit-message').classList.remove('color-green');
-        document.getElementById('submit-message').textContent = "Het bericht is niet verstuurd";
+    let responseMessage;
+    let submitMessage = document.getElementById('submit-message');
+    
+    if(!wrongInput){
+        await axios.post("https://localhost:7184/api/MailContact", data, {
+            "Content-Tye": "application/json"
+        })
+        .then(res => {
+            responseMessage = "Het is gelukt";
+            submitMessage.classList.add('color-green');
+            submitMessage.classList.remove('color-red');
+            submitMessage.textContent = responseMessage;
+            event.target.reset();
+        })
+        .catch(err => { 
+            responseMessage = "Het is niet gelukt";
+            submitMessage.classList.add('color-red');
+            submitMessage.classList.remove('color-green');
+            submitMessage.textContent = responseMessage;
+        });
     }
     else{
-        document.getElementById('submit-message').classList.remove('color-red');
-        document.getElementById('submit-message').classList.add('color-green');
-        document.getElementById('submit-message').textContent = "Het bericht is verstuurd";
+        responseMessage = "Het is niet gelukt";
+        submitMessage.classList.add('color-red')
+        submitMessage.classlist.remove('color-green')
+        submitMessage.textContent = responseMessage
     }
-    //show message of failed send
-})
+});
 
 function getMaxLengthFromInputValue(name){
     let length = 0;
-    if(name === "first-name" || name === "last-name") length = 60;
-    else if(name === "email") length = 80;
-    else if(name === "phone-number") length = 20;
-    else if(name === "subject") length = 200;
-    else if(name === "message") length = 600;
+    if(name === "FirstName" || name === "LastName") length = 60;
+    else if(name === "Email") length = 80;
+    else if(name === "PhoneNumber") length = 20;
+    else if(name === "Subject") length = 200;
+    else if(name === "Message") length = 600;
     return length;
 }
 function addCharCounter() {
@@ -106,25 +124,25 @@ function addCharCounter() {
     }
 }
 function addValidateInputFields(){
-    document.getElementById('contact-form__email').addEventListener('keyup', (e) => {
+    document.getElementById('contact-form__Email').addEventListener('keyup', (e) => {
         if(validateEmail(e.target.value))
         {
-            document.getElementById('contact-form__email').classList.remove('contact-form__input--red');
+            document.getElementById('contact-form__Email').classList.remove('contact-form__input--red');
             document.getElementById('contact-form__submit').disabled = false;
         }
         else{
-            document.getElementById('contact-form__email').classList.add('contact-form__input--red');
+            document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
             document.getElementById('contact-form__submit').disabled = true;
         }
     });
-    document.getElementById('contact-form__phone-number').addEventListener('keyup', (e) => {
+    document.getElementById('contact-form__PhoneNumber').addEventListener('keyup', (e) => {
         if(validatePhoneNumber(e.target.value))
         {
-            document.getElementById('contact-form__phone-number').classList.remove('contact-form__input--red');
+            document.getElementById('contact-form__PhoneNumber').classList.remove('contact-form__input--red');
             document.getElementById('contact-form__submit').disabled = false;
         }
         else{
-            document.getElementById('contact-form__phone-number').classList.add('contact-form__input--red');
+            document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
             document.getElementById('contact-form__submit').disabled = true;
         }
     });

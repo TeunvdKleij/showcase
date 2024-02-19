@@ -46,7 +46,6 @@
     -webkit-backdrop-filter: blur(10px);
     margin: 35px 10px;
     max-width: 90vw;
-    max-height: 185px;
 }
 .contact-info__title{
     display: flex;

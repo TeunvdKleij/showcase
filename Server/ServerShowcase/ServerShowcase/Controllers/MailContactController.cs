@@ -32,13 +32,14 @@ namespace ServerShowcase.Controllers
             SmtpClient smtp = new SmtpClient();
             try
             {
-                mail.From.Add(new MailboxAddress("CVTeun", "no-reply@teunvanderkleij.nl"));
+                mail.From.Add(new MailboxAddress(mailContact.FirstName + " " + mailContact.LastName, mailContact.Email.ToString()));
                 mail.To.Add(new MailboxAddress("Teun van der Kleij", "teunvanderkleij@gmail.com"));
 
                 mail.Subject = mailContact.Subject;
                 var builder = new BodyBuilder()
                 {
-                    TextBody = mailContact.FirstName.ToString()
+                    TextBody = "Phone number: " + mailContact.PhoneNumber + "\n" + "Message: \n" + mailContact.Message
+                                
                 };
                 mail.Body = builder.ToMessageBody();
 

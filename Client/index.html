@@ -5,14 +5,17 @@
     <title>CV Teun van der Kleij</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <script defer src="javascript/cookie.js"></script>
     <script defer src="javascript/currectSelected.js"></script>
     <script defer src="javascript/contactform.js"></script>
+    <script defer type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <div class="cookies-container hide">
-        <section class="cookie-consent-form hide">
+    <div class="cookies-container cookies-container__hide">
+        <section class="cookie-consent-form cookies-container__hide">
             <div class="cookie-consent-form__description">
                 <p>
                     Deze website gebruikt cookies.
@@ -34,8 +37,10 @@
                     <h1 class="personal__info--name">Teun van der Kleij</h1>
                     <p class="personal__info--about-me">
                         Als student aan de hogeschool Windesheim ben ik in opleiding om software engineer te worden. 
-                        Op het moment volg ik het semester Web Development in leerjaar 2. Om meer over mij te weten
-                        er een kort beschrijving van mij en de mogelijkheid om contact met mij op te nemen.
+                        Op het moment volg ik het semester Web Development in leerjaar 2. Mijn huidige en vorige Opleidingen,
+                        Werkervaringen en Vaardigheden staan op de profiel pagina indien je meer over mij te weten wil komen.
+                        Op de Contact pagina is een formulier om mij een bericht te sturen om in contact te komen met mij.
+                    
                     <p>
                 </div>
             </div>
@@ -67,7 +72,7 @@
         <section class="profile">
             <nav class="profile__buttons">
                 <button class="profile__button profile__button--current" id="profile-button">Profiel</button>
-                <button class="profile__button" id="contact-form-button">Contacten</button>
+                <button class="profile__button" id="contact-form-button">Contact</button>
             </nav>
             <section class="profile__content animate__animated animate__fadeInRight">
                 <div>
@@ -134,47 +139,47 @@
                             <div class="form__input">
                                 <label class="form__input--title-text">
                                     <p class="form__input--title">Voornaam<span class="color-red">*</span></p>
-                                    <p class="form__input--textarea__char-count" id="char-count__first-name">0/60</p>
+                                    <p class="form__input--textarea__char-count" id="char-count__FirstName">0/60</p>
                                 </label>
-                                <input type="text" name="first-name" maxlength="60" required class="form__input--textfield" id="contact-form__first-name" placeholder="Voornaam">
+                                <input type="text" name="FirstName" maxlength="60" required class="form__input--textfield" id="contact-form__FirstName" placeholder="Voornaam">
                             </div>
                             <div class="form__input">
                                 <label class="form__input--title-text">
                                     <p class="form__input--title">Achternaam<span class="color-red">*</span></p>
-                                    <p class="form__input--textarea__char-count" id="char-count__last-name">0/60</p>
+                                    <p class="form__input--textarea__char-count" id="char-count__LastName">0/60</p>
                                 </label>
-                                <input type="text" name="last-name" maxlength="60" required class="form__input--textfield" id="contact-form__last-name" placeholder="Achternaam">
+                                <input type="text" name="LastName" maxlength="60" required class="form__input--textfield" id="contact-form__LastName" placeholder="Achternaam">
                                 
                             </div>
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Telefoonnummer<span class="color-red">*</span></p>
-                                <p class="form__input--textarea__char-count" id="char-count__phone-number">0/20</p>
+                                <p class="form__input--textarea__char-count" id="char-count__PhoneNumber">0/20</p>
                             </label>
-                            <input type="tel" name="phone-number" maxlength="20" required class="form__input--textfield" id="contact-form__phone-number" placeholder="Telefoonnummer">
+                            <input type="tel" name="PhoneNumber" maxlength="20" required class="form__input--textfield" id="contact-form__PhoneNumber" placeholder="Telefoonnummer">
                             
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Email<span class="color-red">*</span></p>
-                                <p class="form__input--textarea__char-count" id="char-count__email">0/80</p>
+                                <p class="form__input--textarea__char-count" id="char-count__Email">0/80</p>
                             </label>
-                            <input type="email" name="email" maxlength="80" required class="form__input--textfield" id="contact-form__email" placeholder="Email">
+                            <input type="email" name="Email" maxlength="80" required class="form__input--textfield" id="contact-form__Email" placeholder="Email">
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Onderwerp<span class="color-red">*</span></p>
-                                <p class="form__input--textarea__char-count" id="char-count__subject">0/200</p>
+                                <p class="form__input--textarea__char-count" id="char-count__Subject">0/200</p>
                             </label>
-                            <input type="text" name="subject" maxlength="200" required class="form__input--textfield" id="contact-form__subject" placeholder="Onderwerp">
+                            <input type="text" name="Subject" maxlength="200" required class="form__input--textfield" id="contact-form__Subject" placeholder="Onderwerp">
                         </div>
                         <div class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Bericht<span class="color-red">*</span></p>
-                                <p class="form__input--textarea__char-count" id="char-count__message">0/600</p>
+                                <p class="form__input--textarea__char-count" id="char-count__Message">0/600</p>
                             </label>
-                            <textarea maxlength="600" name="message" required form="contact-form" class="form__input--textfield" id="contact-form__message" placeholder="Bericht"></textarea>
+                            <textarea maxlength="600" name="Message" required form="contact-form" class="form__input--textfield" id="contact-form__Message" placeholder="Bericht"></textarea>
                         </div>
                         <div class="form__submit">
                             <p class="form__submit--message" id="submit-message"></p>
@@ -183,14 +188,11 @@
                     </form>
                 </div>
             </section>
-<!--            <section class="contact-message hide">-->
-<!--                <div>-->
-<!--                    <h3 class="category-title">Het bericht</h3>-->
-<!--                    <hr>-->
-<!--                </div>-->
-
-<!--            </section>-->
         </section>
+        <!-- <button class="g-recaptcha"
+                data-sitekey="reCAPTCHA_site_key"
+                data-callback='onSubmit'
+                data-action='submit'>Submit</button> -->
     </div>
 </body>
 </html>

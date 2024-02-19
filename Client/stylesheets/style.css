@@ -25,6 +25,7 @@ body{
     font-family: Arial, serif;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: visible;
 }
 .category-title {
     color: rgba(39, 71, 140, 0.96);
@@ -43,13 +44,11 @@ body{
 .color-green{
     color: green;
 }
-@media only screen and (min-width: 900px){
-
-}
 
 @media only screen and (min-width: 860px) {
     .main {
         flex-direction: row;
+        overflow-y: auto;
     }
     .profile-content__category--hidden-mobile{
         display: flex;

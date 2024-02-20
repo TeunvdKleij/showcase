@@ -10,26 +10,27 @@
     <script defer src="javascript/currectSelected.js"></script>
     <script defer src="javascript/contactform.js"></script>
     <script defer type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="https://www.google.com/recaptcha/api.js"></script>
+    <script defer async src="https://www.google.com/recaptcha/api.js"></script>
+</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <div class="cookies-container cookies-container__hide">
         <section class="cookie-consent-form cookies-container__hide">
-            <div class="cookie-consent-form__description">
+            <article class="cookie-consent-form__description">
                 <p>
                     Deze website gebruikt cookies.
                     We gebruiken cookies om content te personaliseren, voor social media en het analyseren
                     van verkeer op de website, advertenties.
                 </p>
-            </div>
-            <div class="cookie-consent-form__button">
+            </article>
+            <section class="cookie-consent-form__button">
                 <button class="cookie-consent-form__button--accept">Ja, natuurlijk</button>
                 <button class="cookie-consent-form__button--reject">Neu, misschien later</button>
-            </div>
+            </section>
         </section>
     </div>
-    <div class="main">
+    <main class="main">
         <section class="personalia">
             <div class="personalia__personal">
                 <img class="personal__photo" src="images/profile_picture.jpg" alt="Foto">
@@ -40,33 +41,32 @@
                         Op het moment volg ik het semester Web Development in leerjaar 2. Mijn huidige en vorige opleiding,
                         werkervaringen en vaardigheden staan op de profiel pagina indien je meer over mij te weten wil komen.
                         Op de Contact pagina is een formulier om mij een bericht te sturen om in contact te komen met mij.
-                    
-                    <p>
+                    </p>
                 </div>
             </div>
-            <div class="personalia__contact-info">
+            <section class="personalia__contact-info">
                 <h1 class="contact-info__title">Contact info</h1>
                 <div class="contact-info__options">
-                    <div class="contact-info__option">
-                        <div class="contact-info__option--icon">
-                            <img src="images/mail.png">
-                        </div>
+                    <article class="contact-info__option">
+                        <figure class="contact-info__option--icon">
+                            <img src="images/mail.png" alt="Mail icon">
+                        </figure>
                         <p class="contact-info__text">teunvanderkleij@gmail.com</p>
-                    </div>
-                    <div class="contact-info__option">
-                        <div class="contact-info__option--icon">
-                            <img src="images/linkedin.png">
-                        </div>
+                    </article>
+                    <article class="contact-info__option">
+                        <figure class="contact-info__option--icon">
+                            <img src="images/linkedin.png" alt="LinkedIn Icon">
+                        </figure>
                         <a class="contact-info__text" href="https://www.linkedin.com/in/teun-van-der-kleij-9b805a258" id="linkedInHref">www.linkedin.com/in/teun-van-der-kleij-9b805a258</a>
-                    </div>
-                    <div class="contact-info__option">
-                        <div class="contact-info__option--icon">
-                            <img src="images/telephone.png">
-                        </div>
+                    </article>
+                    <article class="contact-info__option">
+                        <figure class="contact-info__option--icon">
+                            <img src="images/telephone.png" alt="Phone Icon">
+                        </figure>
                         <p class="contact-info__text">(+31) 6 38 44 46 37</p>
-                    </div>
+                    </article>
                 </div>
-            </div>
+            </section>
         </section>
 
         <section class="profile">
@@ -75,156 +75,154 @@
                 <button class="profile__button" id="contact-form-button">Contact</button>
             </nav>
             <section class="profile__content animate__animated animate__fadeInRight">
-                <div>
+                <header>
                     <h3 class="category-title">Opleidingen</h3>
                     <hr>
-                </div>
-                <div class="profile__content--element">
-                    <div class="profile__content--element__header">
+                </header>
+                <article class="profile__content--element">
+                    <header class="profile__content--element__header">
                         <h4 class="profile__content--element__title">HBO-ICT</h4>
                         <p class="profile__content--element__period">September 2022 - Juli 2026</p>
-                    </div>
+                    </header>
                     <p class="profile__content--institute">Hogeschool Windesheim, Zwolle</p>
-                </div>
-                <div class="profile__content--element">
-                    <div class="profile__content--element__header">
+                </article>
+                <article class="profile__content--element">
+                    <header class="profile__content--element__header">
                         <h4 class="profile__content--element__title">VWO Gymnasium</h4>
                         <p class="profile__content--element__period">September 2015 - Juli 2021</p>
-                    </div>
+                    </header>
                     <p class="profile__content--institute">Het Stedelijk Zutphen, Zutphen</p>
-                </div>
-                <div>
+                </article>
+                <header>
                     <h3 class="category-title">Werkervaring</h3>
                     <hr>
-                </div>
-                <div class="profile__content--element">
-                    <div class="profile__content--element__header">
+                </header>
+                <article class="profile__content--element">
+                    <header class="profile__content--element__header">
                         <h4 class="profile__content--element__title">Student assistent</h4>
                         <p class="profile__content--element__period">Februari 2024 - Heden</p>
-                    </div>
+                    </header>
                     <p class="profile__content--institute">Hogeschool Windesheim, Zwolle</p>
                     <p class="profile__content--description">
                         Als student assistent bij Windesheim geef ik werkcolleges, help studenten met vragen en draag bij aan 
                         de ontwikkeling van het onderwijs
                     </p>
-                </div>
-                <div class="profile__content--element">
-                    <div class="profile__content--element__header">
+                </article>
+                <article class="profile__content--element">
+                    <header class="profile__content--element__header">
                         <h4 class="profile__content--element__title">Teaching assistant</h4>
                         <p class="profile__content--element__period">September 2023 - Januari 2024</p>
-                    </div>
+                    </header>
                     <p class="profile__content--institute">Hogeschool Windesheim, Zwolle</p>
                     <p class="profile__content--description">       
                         Als teaching assistant heb ik docenten ondersteund door vragen van studenten te beantwoorden, 
                         en werkcolleges te geven. Passie en interesse in ICT en les geven waren essentieel hiervoor.
                     </p>
-                </div>
-                <div>
+                </article>
+                <header>
                     <h3 class="category-title">Vaardigheden</h3>
                     <hr>
-                </div>
-                <div class="profile__content--element profile__content--element__header">
+                </header>
+                <article class="profile__content--element ">
                     <h4 class="profile__content--element__title">Java</h4>
                     <p class="profile__content--description">       
                         Ik heb voor Java een applicatie gebouwd voor een magazijn robot voor een HBO project. 
                         Samen met de lessen heb ik een half jaar ervaring met Java.
                     </p>
-                </div>
-                <div class="profile__content--element profile__content--element__header">
+                </article>
+                <article class="profile__content--element">
                     <h4 class="profile__content--element__title">C#</h4>
                     <p class="profile__content--description">       
                         Ik heb voor C# een camping administratie applicatie gebouwd voor een HBO project. 
                         Samen met de lessen heb ik een half jaar ervaring met C#.
                     </p>
-                </div>
-                <div class="profile__content--element profile__content--element__header">
+                </article>
+                <article class="profile__content--element">
                     <h4 class="profile__content--element__title">PHP</h4>
                     <p class="profile__content--description">       
                         Ik heb voor PHP een webshop gemaakt in het eerste jaar bij Windesheim. Tijdens mijn periode als 
                         teaching assistant heb ik PHP les gegeven.
                     </p>
-                </div>
-                <div class="profile__content--element profile__content--element__header">
+                </article>
+                <article class="profile__content--element">
                     <h4 class="profile__content--element__title">SQL</h4>
                     <p class="profile__content--description">       
                         Ik gebruik SQL voor bijna 2 jaar nu. TIjdens mijn periode als teaching assistant 
                         heb ik ook les gegeven SQL en Databases les gegeven.
                     </p>
-                </div>  
-                <div class="profile__content--element profile__content--element__header">
+                </article>  
+                <article class="profile__content--element">
                     <h4 class="profile__content--element__title">Scrum</h4>
                     <p class="profile__content--description">       
                         Voor mijn hele studie heb ik tijdens projecten scrum gebruikt. In November 2023 heb ik een tentamen 
                         voor scrum succesvol afgerond.
                     </p>
-                </div>         
+                </article>         
             </section>
-            <section class="contact-form hide">
-                <div>
+            <section class="contact-form__section animate__animated animate__fadeInRight hide">
+                <header>
                     <h3 class="category-title">Stuur mij een bericht</h3>
                     <hr>
-                </div>
-                <div class="contact-form">
+                </header>
+                <section class="contact-form">
                     <form method="post" class="contact-form__form" id="contact-form">
-                        <div class="form__names">
-                            <div class="form__input">
+                        <section class="form__names">
+                            <article class="form__input">
                                 <label class="form__input--title-text">
                                     <p class="form__input--title">Voornaam<span class="color-red">*</span></p>
                                     <p class="form__input--textarea__char-count" id="char-count__FirstName">0/60</p>
                                 </label>
                                 <input type="text" name="FirstName" maxlength="60" required class="form__input--textfield" id="contact-form__FirstName" placeholder="Voornaam">
-                            </div>
-                            <div class="form__input">
+                            </article>
+                            <article class="form__input">
                                 <label class="form__input--title-text">
                                     <p class="form__input--title">Achternaam<span class="color-red">*</span></p>
                                     <p class="form__input--textarea__char-count" id="char-count__LastName">0/60</p>
                                 </label>
                                 <input type="text" name="LastName" maxlength="60" required class="form__input--textfield" id="contact-form__LastName" placeholder="Achternaam">
                                 
-                            </div>
-                        </div>
-                        <div class="form__input">
+                            </article>
+                        </section>
+                        <article class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Telefoonnummer<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__PhoneNumber">0/20</p>
                             </label>
                             <input type="tel" name="PhoneNumber" maxlength="20" required class="form__input--textfield" id="contact-form__PhoneNumber" placeholder="Telefoonnummer">
                             
-                        </div>
-                        <div class="form__input">
+                        </article>
+                        <article class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Email<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__Email">0/80</p>
                             </label>
                             <input type="email" name="Email" maxlength="80" required class="form__input--textfield" id="contact-form__Email" placeholder="Email">
-                        </div>
-                        <div class="form__input">
+                        </article>
+                        <article class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Onderwerp<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__Subject">0/200</p>
                             </label>
                             <input type="text" name="Subject" maxlength="200" required class="form__input--textfield" id="contact-form__Subject" placeholder="Onderwerp">
-                        </div>
-                        <div class="form__input">
+                        </article>
+                        <article class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Bericht<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__Message">0/600</p>
                             </label>
                             <textarea maxlength="600" name="Message" required form="contact-form" class="form__input--textfield" id="contact-form__Message" placeholder="Bericht"></textarea>
-                        </div>
-                        <div class="form__submit">
+                        </article>
+                        <article class="form__submit">
                             <p class="form__submit--message" id="submit-message"></p>
                             <button disabled type="submit" id="contact-form__submit">Versturen</button>
                             <img id="load-icon-contact-form" width="32px" height="32px" class="load-icon hide" src="images/loading-loading-forever.gif"></img>
-                        </div>
+                        </article>
                     </form>
-                </div>
+                    <div class="captcha g-recaptcha" data-sitekey="6LfpfHkpAAAAAPNHWs9Ex2vFHgBFcpwkLmxamJ7Y"></div>
+                </section>
             </section>
         </section>
-        <!-- <button class="g-recaptcha"
-                data-sitekey="reCAPTCHA_site_key"
-                data-callback='onSubmit'
-                data-action='submit'>Submit</button> -->
-    </div>
+
+    </main>
 </body>
 </html>

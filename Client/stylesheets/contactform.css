@@ -1,9 +1,16 @@
-.contact-form{
+.contact-form__section{
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
     max-height: calc(100% - 35px);
     overflow-y: auto;
+}
+.contact-form{
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: calc(100% - 35px);
+    overflow-y: hidden;
 }
 .contact-form__form{
     width: 100%;
@@ -75,6 +82,7 @@
 #contact-form__submit:disabled{
     background-color: gray;
     border-color: gray;
+    cursor:not-allowed;
 }
 #contact-form__submit:disabled:hover{
     filter: none;
@@ -84,5 +92,9 @@
 }
 .load-icon{
     box-sizing: border-box;
+}
+.captcha{
+    display: flex;
+    justify-content: center;
 }
 

@@ -22,16 +22,16 @@ class CurrentSelected{
             document.querySelector(`#profile-button`).classList.add('profile__button--current');
             document.querySelector('.profile__content').classList.remove('hide');
             document.querySelector('.profile__content').classList.add('show');
-            document.querySelector('.contact-form').classList.add('hide');
-            document.querySelector('.contact-form').classList.remove('show');
+            document.querySelector('.contact-form__section').classList.add('hide');
+            document.querySelector('.contact-form__section').classList.remove('show');
 
         }
         else if(sectionName === 'contactForm'){
             document.querySelector(`#contact-form-button`).classList.add('profile__button--current');
             document.querySelector('.profile__content').classList.add('hide');
             document.querySelector('.profile__content').classList.remove('show');
-            document.querySelector('.contact-form').classList.remove('hide');
-            document.querySelector('.contact-form').classList.add('show');
+            document.querySelector('.contact-form__section').classList.remove('hide');
+            document.querySelector('.contact-form__section').classList.add('show');
 
         }
     }

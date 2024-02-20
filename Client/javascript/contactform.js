@@ -17,9 +17,20 @@ const validatePhoneNumber = (phoneNumber) => {
     }
     return false;
 }
+function replaceTags(input){
+     input = input.replaceAll("<script>", " ")
+                .replaceAll("</script>", " ")
+                .replaceAll('= "hidden"', " ")
+                .replaceAll('="hidden"', " ")
+                .replaceAll("color: white", " ")
+    input = input.trim();
+    return input;
+}
+               
 
 document.getElementById('contact-form').addEventListener('submit', async (event) => {
     event.preventDefault();
+    let captchaResponse = grecaptcha.getResponse();
     let inputs = event.target.elements;
     let wrongInput = false;
     let data = {};
@@ -28,6 +39,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
         let inputType = inputs[i].type
         let inputName = inputs[i].name;
         data[inputName] = inputValue;
+        inputValue = replaceTags(inputValue);
         if(inputType === "Email"){
             if(inputValue.length > 80 || inputValue.length <= 0){
                 document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
@@ -75,10 +87,12 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
             }
         }
     }
+
     let responseMessage;
     let submitMessage = document.getElementById('submit-message');
-    
-    if(!wrongInput){
+    submitMessage.classList.add('color-red')
+    submitMessage.classList.remove('color-green')
+    if(!wrongInput && captchaResponse){
         loadIcon.style.display = "block";
         document.getElementById('contact-form__submit').style.display = "none";
         await axios.post("https://localhost:7184/api/MailContact", data, {
@@ -88,8 +102,8 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
             responseMessage = "Het is gelukt";
             submitMessage.classList.add('color-green');
             submitMessage.classList.remove('color-red');
-            submitMessage.textContent = responseMessage;
             event.target.reset();
+            grecaptcha.reset();
             for(let i = 0; i < inputs.length-1; i++){
                 document.getElementById('char-count__' + inputs[i].name).textContent =  "0/" + getMaxLengthFromInputValue(inputs[i].name);
             }
@@ -98,19 +112,17 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
         })
         .catch(err => { 
             responseMessage = "Het is niet gelukt";
-            submitMessage.classList.add('color-red');
-            submitMessage.classList.remove('color-green');
-            submitMessage.textContent = responseMessage;
         });
         loadIcon.style.display = "none";
         document.getElementById('contact-form__submit').style.display = "block";
     }
+    else if(!captchaResponse){
+        responseMessage = "Vul de captcha in, het is niet gelukt";
+    }
     else{
         responseMessage = "Het is niet gelukt";
-        submitMessage.classList.add('color-red')
-        submitMessage.classList.remove('color-green')
-        submitMessage.textContent = responseMessage
     }
+    submitMessage.textContent = responseMessage
 });
 
 function checkEmptyFields(){
@@ -134,7 +146,7 @@ function getMaxLengthFromInputValue(name){
     else if(name === "Message") length = 600;
     return length;
 }
-function addDisabledSubmitForm(){
+function toggleSubmitForm(){
     if(!disabledInput && !phoneSubmitDisabled && !emailSubmitDisabled) submitButton.disabled = false;
     else submitButton.disabled = true;   
 };
@@ -146,41 +158,59 @@ function addInputEventListener() {
             document.getElementById('char-count__' + input.name).textContent = (e.target.value.length) + "/" + getMaxLengthFromInputValue(input.name);
             if(checkEmptyFields()) disabledInput = true;
             else disabledInput = false;
-            addDisabledSubmitForm();
-            document.getElementById('submit-message').textContent = "";
-            if(input.name !== "Email" || input.name !== "PhoneNumber"){
+            if(input.name === "PhoneNumber"){
+                if(validatePhoneNumber(input.value)){
+                    document.getElementById('contact-form__PhoneNumber').classList.remove('contact-form__input--red');
+                    phoneSubmitDisabled = false;
+                }
+                else{
+                    document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
+                    phoneSubmitDisabled = true;
+                }
+            }
+            else if(input.name === "Email"){
+                if(validateEmail(input.value)){
+                    document.getElementById('contact-form__Email').classList.remove('contact-form__input--red');
+                    emailSubmitDisabled = false;
+                }
+                else{
+                    document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
+                    emailSubmitDisabled = true;
+                }
+            }
+            if(input.name !== "Email" && input.name !== "PhoneNumber"){
                 input.classList.remove('contact-form__input--red');
             }
+            document.getElementById('submit-message').textContent = "";
+            toggleSubmitForm();
         });
     }
 }
-function addEmailAndPhoneValidate(){
-    document.getElementById('contact-form__PhoneNumber').addEventListener('keyup', (e) => {
-        if(validatePhoneNumber(e.target.value))
-        {
-            document.getElementById('contact-form__PhoneNumber').classList.remove('contact-form__input--red');
-            phoneSubmitDisabled = false;
-        }
-        else{
-            document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
-            phoneSubmitDisabled = true;
-        }
-    });
-    document.getElementById('contact-form__Email').addEventListener('keyup', (e) => {
-        if(validateEmail(e.target.value))
-        {
-            document.getElementById('contact-form__Email').classList.remove('contact-form__input--red');
-            emailSubmitDisabled = false;
-        }
-        else{
-            document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
-            emailSubmitDisabled = true;
-        }
-    });
-    
-}
+// function addEmailAndPhoneValidate(){
+//     document.getElementById('contact-form__PhoneNumber').addEventListener('keyup', (e) => {
+//         if(validatePhoneNumber(e.target.value))
+//         {
+//             document.getElementById('contact-form__PhoneNumber').classList.remove('contact-form__input--red');
+//             phoneSubmitDisabled = false;
+//         }
+//         else{
+//             document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
+//             phoneSubmitDisabled = true;
+//         }
+//     });
+//     document.getElementById('contact-form__Email').addEventListener('keyup', (e) => {
+//         if(validateEmail(e.target.value))
+//         {
+//             document.getElementById('contact-form__Email').classList.remove('contact-form__input--red');
+//             emailSubmitDisabled = false;
+//         }
+//         else{
+//             document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
+//             emailSubmitDisabled = true;
+//         }
+//     });
+// }
 addInputEventListener();
-addEmailAndPhoneValidate();
 
 
 

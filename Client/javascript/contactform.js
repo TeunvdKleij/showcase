@@ -186,30 +186,6 @@ function addInputEventListener() {
         });
     }
 }
-// function addEmailAndPhoneValidate(){
-//     document.getElementById('contact-form__PhoneNumber').addEventListener('keyup', (e) => {
-//         if(validatePhoneNumber(e.target.value))
-//         {
-//             document.getElementById('contact-form__PhoneNumber').classList.remove('contact-form__input--red');
-//             phoneSubmitDisabled = false;
-//         }
-//         else{
-//             document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
-//             phoneSubmitDisabled = true;
-//         }
-//     });
-//     document.getElementById('contact-form__Email').addEventListener('keyup', (e) => {
-//         if(validateEmail(e.target.value))
-//         {
-//             document.getElementById('contact-form__Email').classList.remove('contact-form__input--red');
-//             emailSubmitDisabled = false;
-//         }
-//         else{
-//             document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
-//             emailSubmitDisabled = true;
-//         }
-//     });
-// }
 addInputEventListener();
 
 

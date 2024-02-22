@@ -31,6 +31,7 @@ function replaceTags(input){
 document.getElementById('contact-form').addEventListener('submit', async (event) => {
     event.preventDefault();
     let captchaResponse = grecaptcha.getResponse();
+    console.log(captchaResponse);
     let inputs = event.target.elements;
     let wrongInput = false;
     let data = {};
@@ -155,7 +156,7 @@ function addInputEventListener() {
     for(let i = 0; i < formInputs.length-1; i++){
         let input = formInputs[i];
         input.addEventListener('keyup', (e) => {
-            document.getElementById('char-count__' + input.name).textContent = (e.target.value.length) + "/" + getMaxLengthFromInputValue(input.name);
+            document.getElementById('char-count__' + input.name).textContent = (input.value.length) + "/" + getMaxLengthFromInputValue(input.name);
             if(checkEmptyFields()) disabledInput = true;
             else disabledInput = false;
             if(input.name === "PhoneNumber"){
@@ -181,6 +182,13 @@ function addInputEventListener() {
             if(input.name !== "Email" && input.name !== "PhoneNumber"){
                 input.classList.remove('contact-form__input--red');
             }
+            //TIP iets mee doen
+            // if(input.value > getMaxLengthFromInputValue(input.name)){
+            //     input.classList.add('contact-form__input--red');
+            // }
+            // else{
+            //     input.classList.remove('contact-form__input--red');
+            // }
             document.getElementById('submit-message').textContent = "";
             toggleSubmitForm();
         });

@@ -18,7 +18,7 @@ namespace ServerShowcase.Model
         [Phone]
         [MinLength(1)]
         [MaxLength(20)]
-        [RegularExpression(@"^((\+[0-9]{2}|0)[0-9]{9,20})|(([0][0-9]{1}-)[0-9]{8})$")]
+        [RegularExpression(@"^((\+[0-9]{2}|0)[0-9]{9,20})|(([0][0-9]{1}-)[0-9]{8,20})$")]
         public required string PhoneNumber { get; set; }
         [Required]
         [EmailAddress]

@@ -12,7 +12,7 @@ const validateEmail = (email) => {
     return false;
 };
 const validatePhoneNumber = (phoneNumber) => {
-    if (phoneNumber.match("(^\\+[0-9]{2}|^\\+[0-9]{2}\\(0\\)|^\\(\\+[0-9]{2}\\)\\(0\\)|^00[0-9]{2}|^0)([0-9]{9,20}$|[0-9\\-\\s]{10,20}$)")) {
+    if (phoneNumber.match(/^((\+[0-9]{2}|0)[0-9]{9,20})|(([0][0-9]{1}-)[0-9]{8,20})$/)) {
         return true;
     }
     return false;

@@ -1,0 +1,73 @@
+2024-02-23 11:29:25.368 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-23 11:29:25.415 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-23 11:29:25.419 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-23 11:29:25.420 +01:00  INF  Hosting environment: Development
+2024-02-23 11:29:25.420 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-23 11:29:29.664 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-23 11:29:29.969 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 320.6076ms
+2024-02-23 11:29:30.008 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-23 11:29:30.021 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.8807ms
+2024-02-23 11:29:30.068 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-23 11:29:30.159 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.4236ms
+2024-02-23 11:29:30.549 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-23 11:29:30.749 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 201.0413ms
+2024-02-23 11:29:40.615 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 169
+2024-02-23 11:29:40.630 +01:00  INF  CORS policy execution failed.
+2024-02-23 11:29:40.631 +01:00  INF  Request origin https://localhost:7184 does not have permission to access the resource.
+2024-02-23 11:29:40.643 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-23 11:29:40.686 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-23 11:29:40.759 +01:00  INF  Seri Log is Working
+2024-02-23 11:29:43.025 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-23 11:29:43.045 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 2350.922ms
+2024-02-23 11:29:43.046 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-23 11:29:43.046 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 2431.262ms
+2024-02-23 11:30:19.880 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-23 11:30:19.882 +01:00  INF  CORS policy execution successful.
+2024-02-23 11:30:19.885 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 4.7633ms
+2024-02-23 11:30:19.918 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 131
+2024-02-23 11:30:19.919 +01:00  INF  CORS policy execution successful.
+2024-02-23 11:30:19.920 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-23 11:30:19.920 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-23 11:30:19.924 +01:00  INF  Seri Log is Working
+2024-02-23 11:30:21.749 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-23 11:30:21.750 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1829.9343ms
+2024-02-23 11:30:21.751 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-23 11:30:21.751 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 1832.6815ms
+2024-02-23 11:30:33.983 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-23 11:30:34.048 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-23 11:30:34.053 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-23 11:30:34.055 +01:00  INF  Hosting environment: Development
+2024-02-23 11:30:34.055 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-23 11:30:39.084 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-23 11:30:39.344 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 268.574ms
+2024-02-23 11:30:39.603 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-23 11:30:39.609 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.1258ms
+2024-02-23 11:30:39.645 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-23 11:30:39.707 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.0717ms
+2024-02-23 11:30:39.891 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-23 11:30:40.009 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.4533ms
+2024-02-23 11:35:22.815 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-23 11:35:22.849 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-23 11:35:22.853 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-23 11:35:22.854 +01:00  INF  Hosting environment: Development
+2024-02-23 11:35:22.855 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-23 11:35:28.241 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-23 11:35:28.696 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 466.5933ms
+2024-02-23 11:35:28.731 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-23 11:35:28.746 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 15.0807ms
+2024-02-23 11:35:28.796 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-23 11:35:28.913 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 116.7095ms
+2024-02-23 11:35:29.127 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-23 11:35:29.360 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 240.6974ms
+2024-02-23 11:35:46.166 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 164
+2024-02-23 11:35:46.185 +01:00  INF  CORS policy execution failed.
+2024-02-23 11:35:46.185 +01:00  INF  Request origin https://localhost:7184 does not have permission to access the resource.
+2024-02-23 11:35:46.190 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-23 11:35:46.238 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-23 11:35:46.320 +01:00  INF   --- PostRequest received --- 
+2024-02-23 11:35:46.490 +01:00  INF   --- Sending mail --- 
+2024-02-23 11:35:48.399 +01:00  INF   --- Mail has been send --- 
+2024-02-23 11:35:48.516 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-23 11:35:48.533 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 2289.2132ms
+2024-02-23 11:35:48.534 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-23 11:35:48.534 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 2367.979ms

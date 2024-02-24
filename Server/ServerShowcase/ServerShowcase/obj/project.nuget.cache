@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/OUdYxWzrtKs3VZZruRnGy5zamUTX4q2UxJWPCUDoYzt5uTsboO/PZwmaa5+ztfTYUtZrjRSXJFBCWuw+E3lw==",
+  "dgSpecHash": "6KHVMpyzpF7oZSL/scWUY+w7s6r8mpHTkTdeyjhyKcSyMDNpbsgbY2gnQxkNgzv85ap4IJXcoUn8cuGzIpU9NA==",
   "success": true,
   "projectFilePath": "C:\\Users\\teunv\\OneDrive\\Bureaublad\\HBOICT\\Jaar2\\Semester_2_WD\\periode3\\Client\\ShocaseCloudFlare\\Server\\ServerShowcase\\ServerShowcase\\ServerShowcase.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\teunv\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\teunv\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
     "C:\\Users\\teunv\\.nuget\\packages\\mimekit\\4.3.0\\mimekit.4.3.0.nupkg.sha512",
+    "C:\\Users\\teunv\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\teunv\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\teunv\\.nuget\\packages\\serilog.aspnetcore\\8.0.1\\serilog.aspnetcore.8.0.1.nupkg.sha512",
     "C:\\Users\\teunv\\.nuget\\packages\\serilog.extensions.hosting\\8.0.0\\serilog.extensions.hosting.8.0.0.nupkg.sha512",

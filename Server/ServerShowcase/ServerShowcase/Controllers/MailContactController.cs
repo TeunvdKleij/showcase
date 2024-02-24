@@ -28,6 +28,7 @@ namespace ServerShowcase.Controllers
         [ProducesResponseType(500)]
         public IActionResult Post([FromBody] MailContactModel mailContact)
         {
+            CaptchaController.ValidateCaptcha(mailContact.CaptchaResponse);
             _logger.LogInformation(" --- PostRequest received --- ");
             if (mailContact == null)
             {
@@ -39,10 +40,14 @@ namespace ServerShowcase.Controllers
                 _logger.LogInformation(" --- ModelSate not valid --- ");
                 return BadRequest(ModelState);
             }
+            if (CaptchaController.ValidateCaptcha(mailContact.CaptchaResponse) == "false")
+            {
+                _logger.LogInformation(" --- No Valid Captcha --- ");
+                return BadRequest(ModelState);
+            }
 
             return SendMail(mailContact);
         }
-        //doe cors 
         private IActionResult SendMail(MailContactModel mailContact)
         {
             MimeMessage mail = new MimeMessage();
@@ -82,6 +87,6 @@ namespace ServerShowcase.Controllers
                 smtp.Dispose();
             }
         }
-        
+
     }
 }

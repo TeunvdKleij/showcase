@@ -1,0 +1,13 @@
+2024-02-24 11:16:46.361 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-24 11:16:46.407 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-24 11:16:46.409 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-24 11:16:46.409 +01:00  INF  Hosting environment: Development
+2024-02-24 11:16:46.409 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-24 11:16:49.574 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-24 11:16:50.394 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 841.1041ms
+2024-02-24 11:16:50.485 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-24 11:16:50.485 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-24 11:16:50.504 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 19.4668ms
+2024-02-24 11:16:50.669 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 184.3675ms
+2024-02-24 11:16:50.840 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-24 11:16:51.091 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 251.7202ms

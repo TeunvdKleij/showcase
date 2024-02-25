@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>CV Teun van der Kleij</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,7 +13,6 @@
     <script defer src="javascript/currectSelected.js"></script>
     <script defer src="javascript/contactform.js"></script>
     <script defer type="module" src="javascript/axios.min.js"></script>
-    <script defer async src="javascript/api.js"></script>
 </head>
 <body>
     <div class="cookies-container cookies-container__hide">
@@ -163,7 +165,7 @@
                     <hr>
                 </header>
                 <section class="contact-form">
-                    <form method="post" class="contact-form__form" id="contact-form">
+                    <form method="post" class="contact-form__form" id="contact-form" autocomplete="off">
                         <section class="form__names">
                             <article class="form__input">
                                 <label class="form__input--title-text">
@@ -216,7 +218,18 @@
                             <img id="load-icon-contact-form" width="32px" height="32px" class="load-icon hide" src="images/loading-loading-forever.gif"></img>
                         </article>
                     </form>
-                    <div class="captcha g-recaptcha" data-sitekey="6LfpfHkpAAAAAPNHWs9Ex2vFHgBFcpwkLmxamJ7Y"></div>
+                    <form id="catpcha-form" class="captcha-form" autocomplete="off">
+                        <div class="captcha-form__fields">
+                            <header class="captcha-form__fields--header">
+                                <img id="captcha-icon" src="images/verified.png" alt="catpcha">
+                                <h1>Voer een skill van mij in:</h1>
+                            </header>
+                            <div>
+                                <input type="text" id="skill-name-input">
+                                <button type="submit" id="captcha-form__submit">Verifieren</button>
+                            </div>
+                        </div>
+                    </form>
                 </section>
             </section>
         </section>

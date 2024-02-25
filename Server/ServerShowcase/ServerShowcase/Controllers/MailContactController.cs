@@ -28,7 +28,6 @@ namespace ServerShowcase.Controllers
         [ProducesResponseType(500)]
         public IActionResult Post([FromBody] MailContactModel mailContact)
         {
-            CaptchaController.ValidateCaptcha(mailContact.CaptchaResponse);
             _logger.LogInformation(" --- PostRequest received --- ");
             if (mailContact == null)
             {
@@ -38,11 +37,6 @@ namespace ServerShowcase.Controllers
             if (!ModelState.IsValid)
             {
                 _logger.LogInformation(" --- ModelSate not valid --- ");
-                return BadRequest(ModelState);
-            }
-            if (CaptchaController.ValidateCaptcha(mailContact.CaptchaResponse) == "false")
-            {
-                _logger.LogInformation(" --- No Valid Captcha --- ");
                 return BadRequest(ModelState);
             }
 
@@ -62,12 +56,15 @@ namespace ServerShowcase.Controllers
                 mail.Subject = mailContact.Subject;
                 var builder = new BodyBuilder()
                 {
-                   TextBody = "Phone number: " + mailContact.PhoneNumber + "\n" + "Message: \n" + mailContact.Message
-                   /* HtmlBody = "<!doctype html>\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">"
-                    +"<head>\r\n<title>"+mailContact.Subject+"</title>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n<meta name=\"viewport\" content=\"width=device-width\" />\r\n<style>\r\n<!--- CSS will be here --->\r\n</style>\r\n</head>"
-                    +""*/
+                    //TextBody = "Phone number: " + mailContact.PhoneNumber + "\n" + "Message: \n" + mailContact.Message
+                   HtmlBody = @"<html>"+
+                      "<body>" +
+                      "<p>Naam : " + mailContact.FirstName + " " + mailContact.LastName + "</p> " +
+                      "<p>Message:</p><br> " +
+                      "<p>" + mailContact.Message + "</p>" +
+                      "</body></html>"
 
-                };
+            };
                 mail.Body = builder.ToMessageBody();
 
                 smtp.Connect("sandbox.smtp.mailtrap.io", 587, false);
@@ -81,7 +78,7 @@ namespace ServerShowcase.Controllers
             catch (Exception ex)
             {
                 _logger.LogInformation(" --- Mail not send --- ");
-                return StatusCode(500, new { Status = "Error", Code = 500, Message = "Email has not been deliverd. Exception message: " + ex.Message});
+                return StatusCode(500, new { Status = "Error", Code = 500, Message = "Email has not been deliverd due to an exception" });
             }
             finally{
                 smtp.Dispose();

@@ -1,8 +1,10 @@
 const submitButton = document.getElementById('contact-form__submit');
+const captchaIcon = document.getElementById('captcha-icon');
 let disabledValidate = true;
 let disabledInput = true;
 let phoneSubmitDisabled = true;
 let emailSubmitDisabled = true;
+let captchaValid = false;
 const loadIcon = document.getElementById('load-icon-contact-form');
 
 const validateEmail = (email) => {
@@ -26,11 +28,29 @@ function replaceTags(input){
     input = input.trim();
     return input;
 }
-               
+
+document.getElementById('catpcha-form').addEventListener('submit', async(event) => {
+    event.preventDefault();
+    let data = {};
+    let inputCatpchaValue = document.getElementById('skill-name-input').value;
+    inputCatpchaValue = replaceTags(inputCatpchaValue);
+    data["Value"] = inputCatpchaValue;
+    await axios.post("https://localhost:7184/api/Captcha", data, {
+        "Content-Tye": "application/json"
+    })
+    .then(res => {
+        captchaValid = true;
+        captchaIcon.src = "images/check.png";
+    })
+    .catch(err => { 
+        catpchaValid = false;
+        captchaIcon.src = "images/cross.png";
+    });
+
+})
 
 document.getElementById('contact-form').addEventListener('submit', async (event) => {
     event.preventDefault();
-    let captchaResponse = grecaptcha.getResponse();
     let inputs = event.target.elements;
     let wrongInput = false;
     let data = {};
@@ -40,54 +60,47 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
         let inputName = inputs[i].name;
         data[inputName] = inputValue;
         inputValue = replaceTags(inputValue);
-        if(inputType === "Email"){
-            if(inputValue.length > 80 || inputValue.length <= 0){
+        if(inputName === "Email"){
+            if(inputValue.length > 80 || inputValue.length === 0){
                 document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
                 wrongInput = true;
             }
         }
-        else if(inputType === "PhoneNumber"){
-            if(inputValue.length > 20 || inputValue.length <= 0){
+        else if(inputName === "PhoneNumber"){
+            if(inputValue.length > 20 || inputValue.length === 0){
                 document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
                 wrongInput = true;
             }
         }
-        else{
-            if(inputType === "Message"){
-                if(inputValue.length > 600 || inputValue.length <= 0){
+        else if(inputName === "Message"){
+                if(inputValue.length > 600 || inputValue.length === 0){
                     document.getElementById('contact-form__Message').classList.add('contact-form__input--red');
                     wrongInput = true;
                 }
             }
-            else if(inputType === "text"){
-                if(inputName === "FirstName"){
-                    if(inputValue.length > 60 || inputValue.length <= 0){
-                        document.getElementById('contact-form__FirstName').classList.add('contact-form__input--red');
-                        wrongInput = true;
-                    }
-                }
-                else if(inputName === "LastName"){
-                    if(inputValue.length > 60 || inputValue.length <= 0){
-                        document.getElementById('contact-form__LastName').classList.add('contact-form__input--red');
-                        wrongInput = true;
-                    }
-                }
-                else if(inputName === "Subject"){
-                    if(inputValue.length > 200 || inputValue.length <= 0){
-                        document.getElementById('contact-form__Subject').classList.add('contact-form__input--red');
-                        wrongInput = true;
-                    }
-                }
+        else if(inputName === "FirstName"){
+            if(inputValue.length > 60 || inputValue.length === 0){
+                document.getElementById('contact-form__FirstName').classList.add('contact-form__input--red');
+                wrongInput = true;
+            }
+        }
+        else if(inputName === "LastName"){
+            if(inputValue.length > 60 || inputValue.length === 0){
+                document.getElementById('contact-form__LastName').classList.add('contact-form__input--red');
+                wrongInput = true;
+            }
+        }
+        else if(inputName === "Subject"){
+            if(inputValue.length > 200 || inputValue.length === 0){
+                document.getElementById('contact-form__Subject').classList.add('contact-form__input--red');
+                wrongInput = true;
             }
         }
     }
 
     let responseMessage;
     let submitMessage = document.getElementById('submit-message');
-    submitMessage.classList.add('color-red')
-    submitMessage.classList.remove('color-green')
-    if(!wrongInput && captchaResponse){
-        data["CaptchaResponse"] = captchaResponse;
+    if(!wrongInput && captchaValid){
         loadIcon.style.display = "block";
         document.getElementById('contact-form__submit').style.display = "none";
         await axios.post("https://localhost:7184/api/MailContact", data, {
@@ -98,24 +111,33 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
             submitMessage.classList.add('color-green');
             submitMessage.classList.remove('color-red');
             event.target.reset();
-            grecaptcha.reset();
             for(let i = 0; i < inputs.length-1; i++){
                 document.getElementById('char-count__' + inputs[i].name).textContent =  "0/" + getMaxLengthFromInputValue(inputs[i].name);
             }
             submitButton.disabled = true;
+            captchaIcon.src = "images/verified.png";
+            captchaValid = false;
+            document.getElementById('skill-name-input').value = "";
+
 
         })
         .catch(err => { 
             responseMessage = "Het is niet gelukt";
+            submitMessage.classList.add('color-red')
+            submitMessage.classList.remove('color-green')
         });
         loadIcon.style.display = "none";
         document.getElementById('contact-form__submit').style.display = "block";
     }
-    else if(!captchaResponse){
-        responseMessage = "Vul de captcha in, het is niet gelukt";
+    else if(!captchaValid){
+        responseMessage = "Captcha is niet gelukt";
+        submitMessage.classList.add('color-red')
+        submitMessage.classList.remove('color-green')
     }
     else{
         responseMessage = "Het is niet gelukt";
+        submitMessage.classList.add('color-red')
+        submitMessage.classList.remove('color-green')
     }
     submitMessage.textContent = responseMessage
 });
@@ -145,7 +167,7 @@ function toggleSubmitForm(){
     if(!disabledInput && !phoneSubmitDisabled && !emailSubmitDisabled) submitButton.disabled = false;
     else submitButton.disabled = true;   
 };
-function addInputEventListener() {
+function addInputEventListener() {  
     let formInputs = document.getElementById('contact-form').elements;
     for(let i = 0; i < formInputs.length-1; i++){
         let input = formInputs[i];

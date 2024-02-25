@@ -11,3 +11,16 @@
 2024-02-24 11:16:50.669 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 184.3675ms
 2024-02-24 11:16:50.840 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
 2024-02-24 11:16:51.091 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 251.7202ms
+2024-02-24 12:50:02.527 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-24 12:50:02.574 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-24 12:50:02.576 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-24 12:50:02.577 +01:00  INF  Hosting environment: Development
+2024-02-24 12:50:02.577 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-24 12:50:04.577 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-24 12:50:05.335 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 772.0691ms
+2024-02-24 12:50:05.416 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-24 12:50:05.435 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 18.5406ms
+2024-02-24 12:50:05.463 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-24 12:50:05.613 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 150.3487ms
+2024-02-24 12:50:05.783 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-24 12:50:06.158 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 375.7985ms

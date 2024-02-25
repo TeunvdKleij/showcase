@@ -172,14 +172,14 @@
                                     <p class="form__input--title">Voornaam<span class="color-red">*</span></p>
                                     <p class="form__input--textarea__char-count" id="char-count__FirstName">0/60</p>
                                 </label>
-                                <input type="text" name="FirstName" maxlength="60" required class="form__input--textfield" id="contact-form__FirstName" placeholder="Voornaam">
+                                <input type="text" autocomplete="off" name="FirstName" maxlength="60" required class="form__input--textfield" id="contact-form__FirstName" placeholder="Voornaam">
                             </article>
                             <article class="form__input">
                                 <label class="form__input--title-text">
                                     <p class="form__input--title">Achternaam<span class="color-red">*</span></p>
                                     <p class="form__input--textarea__char-count" id="char-count__LastName">0/60</p>
                                 </label>
-                                <input type="text" name="LastName" maxlength="60" required class="form__input--textfield" id="contact-form__LastName" placeholder="Achternaam">
+                                <input type="text" autocomplete="off" name="LastName" maxlength="60" required class="form__input--textfield" id="contact-form__LastName" placeholder="Achternaam">
                                 
                             </article>
                         </section>
@@ -188,7 +188,7 @@
                                 <p class="form__input--title">Telefoonnummer<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__PhoneNumber">0/20</p>
                             </label>
-                            <input type="tel" name="PhoneNumber" maxlength="20" required class="form__input--textfield" id="contact-form__PhoneNumber" placeholder="Telefoonnummer">
+                            <input type="tel" autocomplete="off" name="PhoneNumber" maxlength="20" required class="form__input--textfield" id="contact-form__PhoneNumber" placeholder="Telefoonnummer">
                             
                         </article>
                         <article class="form__input">
@@ -196,21 +196,21 @@
                                 <p class="form__input--title">Email<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__Email">0/80</p>
                             </label>
-                            <input type="email" name="Email" maxlength="80" required class="form__input--textfield" id="contact-form__Email" placeholder="Email">
+                            <input type="email" autocomplete="off" name="Email" maxlength="80" required class="form__input--textfield" id="contact-form__Email" placeholder="Email">
                         </article>
                         <article class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Onderwerp<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__Subject">0/200</p>
                             </label>
-                            <input type="text" name="Subject" maxlength="200" required class="form__input--textfield" id="contact-form__Subject" placeholder="Onderwerp">
+                            <input type="text" autocomplete="off" name="Subject" maxlength="200" required class="form__input--textfield" id="contact-form__Subject" placeholder="Onderwerp">
                         </article>
                         <article class="form__input">
                             <label class="form__input--title-text">
                                 <p class="form__input--title">Bericht<span class="color-red">*</span></p>
                                 <p class="form__input--textarea__char-count" id="char-count__Message">0/600</p>
                             </label>
-                            <textarea maxlength="600" name="Message" required form="contact-form" class="form__input--textfield" id="contact-form__Message" placeholder="Bericht"></textarea>
+                            <textarea maxlength="600" autocomplete="off" name="Message" required form="contact-form" class="form__input--textfield" id="contact-form__Message" placeholder="Bericht"></textarea>
                         </article>
                         <article class="form__submit">
                             <p class="form__submit--message" id="submit-message"></p>
@@ -225,8 +225,8 @@
                                 <h1>Voer een skill van mij in:</h1>
                             </header>
                             <div>
-                                <input type="text" id="skill-name-input">
-                                <button type="submit" id="captcha-form__submit">Verifieren</button>
+                                <input type="text" id="skill-name-input" autocomplete="off">
+                                <button type="submit" id="captcha-form__submit" autocomplete="off">Verifieren</button>
                             </div>
                         </div>
                     </form>

@@ -1,11 +1,12 @@
 const submitButton = document.getElementById('contact-form__submit');
 const captchaIcon = document.getElementById('captcha-icon');
+const submitMessage = document.getElementById('submit-message');
+const loadIcon = document.getElementById('load-icon-contact-form');
 let disabledValidate = true;
 let disabledInput = true;
 let phoneSubmitDisabled = true;
 let emailSubmitDisabled = true;
 let captchaValid = false;
-const loadIcon = document.getElementById('load-icon-contact-form');
 
 const validateEmail = (email) => {
     if(email.match(/^\S+@\S+\.\S{2,}$/)){
@@ -48,68 +49,35 @@ document.getElementById('catpcha-form').addEventListener('submit', async(event) 
     });
 
 })
-
-document.getElementById('contact-form').addEventListener('submit', async (event) => {
-    event.preventDefault();
-    let inputs = event.target.elements;
-    let wrongInput = false;
-    let data = {};
-    for(let i = 0; i < inputs.length-1; i++){
-        let inputValue = inputs[i].value;
-        let inputType = inputs[i].type
-        let inputName = inputs[i].name;
-        data[inputName] = inputValue;
-        inputValue = replaceTags(inputValue);
-        if(inputName === "Email"){
-            if(inputValue.length > 80 || inputValue.length === 0){
-                document.getElementById('contact-form__Email').classList.add('contact-form__input--red');
-                wrongInput = true;
-            }
-        }
-        else if(inputName === "PhoneNumber"){
-            if(inputValue.length > 20 || inputValue.length === 0){
-                document.getElementById('contact-form__PhoneNumber').classList.add('contact-form__input--red');
-                wrongInput = true;
-            }
-        }
-        else if(inputName === "Message"){
-                if(inputValue.length > 600 || inputValue.length === 0){
-                    document.getElementById('contact-form__Message').classList.add('contact-form__input--red');
-                    wrongInput = true;
-                }
-            }
-        else if(inputName === "FirstName"){
-            if(inputValue.length > 60 || inputValue.length === 0){
-                document.getElementById('contact-form__FirstName').classList.add('contact-form__input--red');
-                wrongInput = true;
-            }
-        }
-        else if(inputName === "LastName"){
-            if(inputValue.length > 60 || inputValue.length === 0){
-                document.getElementById('contact-form__LastName').classList.add('contact-form__input--red');
-                wrongInput = true;
-            }
-        }
-        else if(inputName === "Subject"){
-            if(inputValue.length > 200 || inputValue.length === 0){
-                document.getElementById('contact-form__Subject').classList.add('contact-form__input--red');
-                wrongInput = true;
-            }
-        }
+function setWrongInputBorder(inputId){
+    document.getElementById(inputId).classList.add('contact-form__input--red');
+}
+function checkInput(inputName, inputValue, fieldMaxLength){
+    if(inputValue.length > fieldMaxLength || inputValue.length === 0){
+        setWrongInputBorder('contact-form__' + inputName);
+        return true;
     }
+    return false;
+}
+function makeGreenText(responseMessage){
+    submitMessage.textContent = responseMessage;
+    submitMessage.classList.add('color-green');
+    submitMessage.classList.remove('color-red');
+}
+function makeRedText(responseMessage){
+    submitMessage.textContent = responseMessage;
+    submitMessage.classList.remove('color-green');
+    submitMessage.classList.add('color-red');
+}
 
-    let responseMessage;
-    let submitMessage = document.getElementById('submit-message');
-    if(!wrongInput && captchaValid){
+async function sendMail(event, data, inputs){
         loadIcon.style.display = "block";
-        document.getElementById('contact-form__submit').style.display = "none";
+        submitButton.style.display = "none";
         await axios.post("https://localhost:7184/api/MailContact", data, {
             "Content-Tye": "application/json"
         })
         .then(res => {
-            responseMessage = "Het is gelukt";
-            submitMessage.classList.add('color-green');
-            submitMessage.classList.remove('color-red');
+            makeGreenText("Het is gelukt");
             event.target.reset();
             for(let i = 0; i < inputs.length-1; i++){
                 document.getElementById('char-count__' + inputs[i].name).textContent =  "0/" + getMaxLengthFromInputValue(inputs[i].name);
@@ -122,24 +90,30 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
 
         })
         .catch(err => { 
-            responseMessage = "Het is niet gelukt";
-            submitMessage.classList.add('color-red')
-            submitMessage.classList.remove('color-green')
+            makeRedText("Het is niet gelukt");
         });
         loadIcon.style.display = "none";
-        document.getElementById('contact-form__submit').style.display = "block";
+        submitButton.style.display = "block";
+}
+
+document.getElementById('contact-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    let inputs = event.target.elements;
+    let wrongInput = false;
+    let data = {};
+    for(let i = 0; i < inputs.length-1; i++){
+        let input = inputs[i];
+        let inputValue = inputs[i].value;
+        inputValue = replaceTags(inputValue);
+        data[input.name] = inputValue;
+        if(checkInput(input.name, inputValue, getMaxLengthFromInputValue(input.name))){
+            wrongInput = true;
+        }
     }
-    else if(!captchaValid){
-        responseMessage = "Captcha is niet gelukt";
-        submitMessage.classList.add('color-red')
-        submitMessage.classList.remove('color-green')
-    }
-    else{
-        responseMessage = "Het is niet gelukt";
-        submitMessage.classList.add('color-red')
-        submitMessage.classList.remove('color-green')
-    }
-    submitMessage.textContent = responseMessage
+
+    if(!wrongInput && captchaValid) sendMail(event, data, inputs);
+    else if(!captchaValid)          makeRedText("Captcha is niet gelukt")
+    else                            makeRedText("1 of meerdere foute input velden")
 });
 
 function checkEmptyFields(){

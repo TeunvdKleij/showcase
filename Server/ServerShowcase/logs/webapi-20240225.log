@@ -1172,3 +1172,364 @@
 2024-02-25 16:48:57.188 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1754.0976ms
 2024-02-25 16:48:57.189 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
 2024-02-25 16:48:57.189 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 1755.5061ms
+2024-02-25 17:16:24.096 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-25 17:16:24.132 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-25 17:16:24.134 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-25 17:16:24.135 +01:00  INF  Hosting environment: Development
+2024-02-25 17:16:24.136 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-25 17:16:24.408 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-25 17:16:24.620 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 216.6362ms
+2024-02-25 17:16:24.653 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 17:16:24.660 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.0335ms
+2024-02-25 17:16:24.667 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-25 17:16:24.728 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.2093ms
+2024-02-25 17:16:24.901 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-25 17:16:25.062 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 161.9588ms
+2024-02-25 17:25:57.531 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-25 17:25:57.552 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-25 17:25:57.554 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-25 17:25:57.554 +01:00  INF  Hosting environment: Development
+2024-02-25 17:25:57.555 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-25 17:25:57.907 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-25 17:25:58.091 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 189.6623ms
+2024-02-25 17:25:58.103 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 17:25:58.108 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.6201ms
+2024-02-25 17:25:58.153 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-25 17:25:58.206 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.1511ms
+2024-02-25 17:25:58.335 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-25 17:25:58.402 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.6698ms
+2024-02-25 17:26:25.621 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 17:26:25.648 +01:00  INF  CORS policy execution successful.
+2024-02-25 17:26:25.651 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 30.7984ms
+2024-02-25 17:26:25.657 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 17:26:25.661 +01:00  INF  CORS policy execution successful.
+2024-02-25 17:26:25.668 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 17:26:25.725 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 17:26:25.805 +01:00  INF   --- Captcha verified --- 
+2024-02-25 17:26:25.816 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 17:26:25.835 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 103.819ms
+2024-02-25 17:26:25.835 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 17:26:25.836 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 179.4506ms
+2024-02-25 17:26:26.933 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 17:26:26.936 +01:00  INF  CORS policy execution successful.
+2024-02-25 17:26:26.937 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 4.6843ms
+2024-02-25 17:26:26.942 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 143
+2024-02-25 17:26:26.944 +01:00  INF  CORS policy execution successful.
+2024-02-25 17:26:26.944 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 17:26:26.951 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 17:26:26.973 +01:00  INF   --- PostRequest received --- 
+2024-02-25 17:26:27.187 +01:00  INF   --- Sending mail --- 
+2024-02-25 17:26:29.001 +01:00  INF   --- Mail has been send --- 
+2024-02-25 17:26:29.120 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 17:26:29.124 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 2172.7821ms
+2024-02-25 17:26:29.125 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 17:26:29.125 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 2183.7293ms
+2024-02-25 18:21:51.546 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:21:51.556 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:21:51.568 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 22.2657ms
+2024-02-25 18:21:51.575 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:21:51.577 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:21:51.578 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:21:51.579 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:21:51.581 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:21:51.582 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:21:51.584 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 3.3385ms
+2024-02-25 18:21:51.584 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:21:51.585 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 9.8874ms
+2024-02-25 18:22:17.593 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:22:17.598 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:22:17.599 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 5.4719ms
+2024-02-25 18:22:17.607 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 578
+2024-02-25 18:22:17.609 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:22:17.609 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:22:17.614 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:22:17.616 +01:00  INF   --- PostRequest received --- 
+2024-02-25 18:22:17.617 +01:00  INF   --- Sending mail --- 
+2024-02-25 18:22:19.295 +01:00  INF   --- Mail has been send --- 
+2024-02-25 18:22:19.397 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:22:19.398 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1783.9819ms
+2024-02-25 18:22:19.399 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:22:19.399 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 1791.796ms
+2024-02-25 18:25:01.948 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:25:01.948 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:01.949 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 3.2145ms
+2024-02-25 18:25:01.957 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:25:01.957 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:01.957 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:25:01.958 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:25:01.968 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:25:01.970 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:25:01.970 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 12.3725ms
+2024-02-25 18:25:01.970 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:25:01.970 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 13.7466ms
+2024-02-25 18:25:02.658 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:25:02.659 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:02.659 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 0.637ms
+2024-02-25 18:25:02.663 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 204
+2024-02-25 18:25:02.664 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:02.664 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:02.664 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:25:02.680 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-02-25 18:25:02.726 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 61.4498ms
+2024-02-25 18:25:02.726 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:02.726 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 400 null application/problem+json; charset=utf-8 63.099ms
+2024-02-25 18:25:04.783 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 204
+2024-02-25 18:25:04.783 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:04.783 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:04.784 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:25:04.785 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-02-25 18:25:04.785 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1.48ms
+2024-02-25 18:25:04.785 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:04.785 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 400 null application/problem+json; charset=utf-8 3.7876ms
+2024-02-25 18:25:05.315 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 204
+2024-02-25 18:25:05.315 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:05.315 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:05.315 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:25:05.316 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-02-25 18:25:05.316 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1.0035ms
+2024-02-25 18:25:05.317 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:05.317 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 400 null application/problem+json; charset=utf-8 1.6573ms
+2024-02-25 18:25:19.935 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:25:19.936 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:19.936 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 1.6309ms
+2024-02-25 18:25:19.940 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 213
+2024-02-25 18:25:19.941 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:25:19.941 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:19.941 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:25:19.942 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-02-25 18:25:19.942 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1.0567ms
+2024-02-25 18:25:19.942 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:25:19.942 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 400 null application/problem+json; charset=utf-8 2.2189ms
+2024-02-25 18:26:01.291 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:26:01.291 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:26:01.291 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 1.8215ms
+2024-02-25 18:26:01.303 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:26:01.304 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:26:01.304 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:26:01.304 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:26:01.305 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:26:01.305 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:26:01.305 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 0.9026ms
+2024-02-25 18:26:01.305 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:26:01.305 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 2.0988ms
+2024-02-25 18:36:28.586 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:36:28.588 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:36:28.588 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 1.4995ms
+2024-02-25 18:36:28.596 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 17
+2024-02-25 18:36:28.596 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:36:28.596 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:36:28.597 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:36:28.597 +01:00  INF   --- Captcha not verified --- 
+2024-02-25 18:36:28.606 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-02-25 18:36:28.607 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 10.7977ms
+2024-02-25 18:36:28.608 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:36:28.608 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 400 null application/json; charset=utf-8 11.9854ms
+2024-02-25 18:36:34.325 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:36:34.325 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:36:34.326 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 1.7837ms
+2024-02-25 18:36:34.329 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:36:34.330 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:36:34.330 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:36:34.330 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:36:34.330 +01:00  INF   --- Captcha not verified --- 
+2024-02-25 18:36:34.331 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-02-25 18:36:34.331 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 0.8518ms
+2024-02-25 18:36:34.331 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:36:34.331 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 400 null application/json; charset=utf-8 2.9658ms
+2024-02-25 18:36:38.436 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:36:38.436 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:36:38.436 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:36:38.436 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:36:38.437 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:36:38.437 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:36:38.437 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 0.7271ms
+2024-02-25 18:36:38.437 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:36:38.437 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 1.8023ms
+2024-02-25 18:38:03.614 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:38:03.614 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:38:03.616 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 3.312ms
+2024-02-25 18:38:03.626 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:38:03.627 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:38:03.627 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:38:03.627 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:38:03.627 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:38:03.628 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:38:03.628 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 0.868ms
+2024-02-25 18:38:03.628 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:38:03.628 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 1.9362ms
+2024-02-25 18:38:22.624 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:38:22.626 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:38:22.626 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 2.0974ms
+2024-02-25 18:38:22.631 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 132
+2024-02-25 18:38:22.631 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:38:22.632 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:38:22.632 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:38:22.633 +01:00  INF   --- PostRequest received --- 
+2024-02-25 18:38:22.633 +01:00  INF   --- Sending mail --- 
+2024-02-25 18:38:24.293 +01:00  INF   --- Mail has been send --- 
+2024-02-25 18:38:24.394 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:38:24.394 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1761.9847ms
+2024-02-25 18:38:24.394 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:38:24.394 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 1764.3463ms
+2024-02-25 18:40:38.394 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:40:38.395 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:40:38.395 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 1.7551ms
+2024-02-25 18:40:38.410 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:40:38.411 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:40:38.411 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:40:38.411 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:40:38.412 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:40:38.412 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:40:38.412 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 1.042ms
+2024-02-25 18:40:38.412 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:40:38.413 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 2.5085ms
+2024-02-25 18:40:38.966 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:40:38.966 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:40:38.967 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 1.1165ms
+2024-02-25 18:40:38.971 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 123
+2024-02-25 18:40:38.971 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:40:38.972 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:40:38.972 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:40:38.973 +01:00  INF   --- PostRequest received --- 
+2024-02-25 18:40:38.973 +01:00  INF   --- Sending mail --- 
+2024-02-25 18:40:40.596 +01:00  INF   --- Mail has been send --- 
+2024-02-25 18:40:40.695 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:40:40.696 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1723.9413ms
+2024-02-25 18:40:40.696 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:40:40.696 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 1726.0717ms
+2024-02-25 18:45:45.514 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-25 18:45:45.535 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-25 18:45:45.536 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-25 18:45:45.537 +01:00  INF  Hosting environment: Development
+2024-02-25 18:45:45.537 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-25 18:45:48.360 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-25 18:45:48.536 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 180.7534ms
+2024-02-25 18:45:48.547 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 18:45:48.552 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.8237ms
+2024-02-25 18:45:48.560 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-25 18:45:48.602 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.8892ms
+2024-02-25 18:45:48.634 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-25 18:45:48.697 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.1665ms
+2024-02-25 18:45:52.925 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:45:52.941 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:45:52.944 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 20.0843ms
+2024-02-25 18:45:52.949 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:45:52.954 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:45:52.959 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:45:52.990 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:45:53.041 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:45:53.050 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:45:53.066 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 68.2725ms
+2024-02-25 18:45:53.067 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:45:53.067 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 117.7446ms
+2024-02-25 18:47:31.769 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-25 18:47:31.787 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-25 18:47:31.789 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-25 18:47:31.789 +01:00  INF  Hosting environment: Development
+2024-02-25 18:47:31.790 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-25 18:47:34.456 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-25 18:47:34.620 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 167.5444ms
+2024-02-25 18:47:34.636 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 18:47:34.641 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.3192ms
+2024-02-25 18:47:34.645 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-25 18:47:34.680 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.6479ms
+2024-02-25 18:47:34.715 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-25 18:47:34.772 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.995ms
+2024-02-25 18:47:39.965 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:47:39.981 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:47:39.985 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 21.0045ms
+2024-02-25 18:47:39.990 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 12
+2024-02-25 18:47:39.994 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:47:40.000 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:47:40.037 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:47:40.092 +01:00  INF   --- Captcha not verified --- 
+2024-02-25 18:47:40.100 +01:00  INF  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-02-25 18:47:40.108 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 65.3084ms
+2024-02-25 18:47:40.110 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:47:40.110 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 400 null application/json; charset=utf-8 120.9318ms
+2024-02-25 18:47:41.973 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:47:41.974 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:47:41.975 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:47:41.975 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:47:41.977 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:47:41.978 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:47:41.985 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 9.3929ms
+2024-02-25 18:47:41.985 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:47:41.985 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 12.271ms
+2024-02-25 18:49:57.827 +01:00  INF  Now listening on: https://localhost:7184
+2024-02-25 18:49:57.849 +01:00  INF  Now listening on: http://localhost:5123
+2024-02-25 18:49:57.854 +01:00  INF  Application started. Press Ctrl+C to shut down.
+2024-02-25 18:49:57.855 +01:00  INF  Hosting environment: Development
+2024-02-25 18:49:57.855 +01:00  INF  Content root path: C:\Users\teunv\OneDrive\Bureaublad\HBOICT\Jaar2\Semester_2_WD\periode3\Client\ShocaseCloudFlare\Server\ServerShowcase\ServerShowcase
+2024-02-25 18:49:58.132 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/index.html - null null
+2024-02-25 18:49:58.303 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/index.html - 200 null text/html;charset=utf-8 176.4326ms
+2024-02-25 18:49:58.339 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-25 18:49:58.349 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.1487ms
+2024-02-25 18:49:58.392 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/_vs/browserLink - null null
+2024-02-25 18:49:58.444 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.8999ms
+2024-02-25 18:49:58.573 +01:00  INF  Request starting HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - null null
+2024-02-25 18:49:58.632 +01:00  INF  Request finished HTTP/2 GET https://localhost:7184/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.2714ms
+2024-02-25 18:50:11.821 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:50:11.839 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:11.843 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 21.955ms
+2024-02-25 18:50:11.849 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:50:11.854 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:11.861 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:50:11.908 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:50:11.969 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:50:11.976 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:50:11.988 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 74.4266ms
+2024-02-25 18:50:11.989 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:50:11.989 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 141.6923ms
+2024-02-25 18:50:12.878 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:50:12.879 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:12.880 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 2.4303ms
+2024-02-25 18:50:12.883 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 130
+2024-02-25 18:50:12.884 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:12.884 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:50:12.889 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:50:12.905 +01:00  INF   --- PostRequest received --- 
+2024-02-25 18:50:13.061 +01:00  INF   --- Sending mail --- 
+2024-02-25 18:50:14.810 +01:00  INF   --- Mail has been send --- 
+2024-02-25 18:50:14.915 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:50:14.920 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 2030.7054ms
+2024-02-25 18:50:14.920 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:50:14.920 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 2037.4442ms
+2024-02-25 18:50:58.849 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:50:58.850 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:58.850 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 2.374ms
+2024-02-25 18:50:58.854 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 16
+2024-02-25 18:50:58.854 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:58.854 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:50:58.855 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:50:58.856 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:50:58.856 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:50:58.856 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 1.0684ms
+2024-02-25 18:50:58.856 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:50:58.856 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 2.9671ms
+2024-02-25 18:50:59.449 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/MailContact - null null
+2024-02-25 18:50:59.449 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:59.450 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/MailContact - 204 null null 1.3331ms
+2024-02-25 18:50:59.454 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/MailContact - application/json 123
+2024-02-25 18:50:59.454 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:50:59.454 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:50:59.455 +01:00  INF  Route matched with {action = "Post", controller = "MailContact"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.MailContactModel) on controller ServerShowcase.Controllers.MailContactController (ServerShowcase).
+2024-02-25 18:50:59.456 +01:00  INF   --- PostRequest received --- 
+2024-02-25 18:50:59.456 +01:00  INF   --- Sending mail --- 
+2024-02-25 18:51:00.943 +01:00  INF   --- Mail has been send --- 
+2024-02-25 18:51:01.046 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:51:01.047 +01:00  INF  Executed action ServerShowcase.Controllers.MailContactController.Post (ServerShowcase) in 1591.7627ms
+2024-02-25 18:51:01.047 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.MailContactController.Post (ServerShowcase)'
+2024-02-25 18:51:01.047 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/MailContact - 200 null application/json; charset=utf-8 1593.7386ms
+2024-02-25 18:51:18.506 +01:00  INF  Request starting HTTP/2 OPTIONS https://localhost:7184/api/Captcha - null null
+2024-02-25 18:51:18.507 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:51:18.507 +01:00  INF  Request finished HTTP/2 OPTIONS https://localhost:7184/api/Captcha - 204 null null 2.2756ms
+2024-02-25 18:51:18.511 +01:00  INF  Request starting HTTP/2 POST https://localhost:7184/api/Captcha - application/json 17
+2024-02-25 18:51:18.511 +01:00  INF  CORS policy execution successful.
+2024-02-25 18:51:18.511 +01:00  INF  Executing endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:51:18.511 +01:00  INF  Route matched with {action = "Post", controller = "Captcha"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ServerShowcase.Model.CaptchaModel) on controller ServerShowcase.Controllers.CaptchaController (ServerShowcase).
+2024-02-25 18:51:18.512 +01:00  INF   --- Captcha verified --- 
+2024-02-25 18:51:18.512 +01:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-25 18:51:18.513 +01:00  INF  Executed action ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase) in 1.1278ms
+2024-02-25 18:51:18.513 +01:00  INF  Executed endpoint 'ServerShowcase.Controllers.CaptchaController.Post (ServerShowcase)'
+2024-02-25 18:51:18.513 +01:00  INF  Request finished HTTP/2 POST https://localhost:7184/api/Captcha - 200 null application/json; charset=utf-8 3.4755ms

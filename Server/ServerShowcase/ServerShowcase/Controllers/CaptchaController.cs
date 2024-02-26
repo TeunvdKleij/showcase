@@ -9,11 +9,10 @@ namespace ServerShowcase.Controllers
     [ApiController]
     public class CaptchaController : ControllerBase
     {
-        private string[] _skills {  get; set; }
+        private static string[] _skills = ["java", "c#", "php", "sql", "scrum"];
         private readonly ILogger<CaptchaController> _logger;
         public CaptchaController(ILogger<CaptchaController> logger)
         {
-            _skills = ["java", "c#", "php", "sql", "scrum"];
             _logger = logger;
         }
 
@@ -23,16 +22,21 @@ namespace ServerShowcase.Controllers
         [ProducesResponseType(400)]
         public IActionResult Post([FromBody] CaptchaModel captcha)
         {
-            foreach(string skill in _skills)
+            if (CheckCaptcha(captcha.Value))
             {
-                if (captcha.Value.Equals(skill)){
-                    _logger.LogInformation(" --- Captcha verified --- ");
-                    return Ok(new { Status = "OK", Code = 204, Mesassage = "Captcha has been verified" });
-                }
+                _logger.LogInformation(" --- Captcha verified --- ");
+                return Ok(new { Status = "OK", Code = 204, Mesassage = "Captcha has been verified" });
             }
             _logger.LogInformation(" --- Captcha not verified --- ");
             return BadRequest(ModelState);
-
+        }
+        public static bool CheckCaptcha(string captchaValue) {
+            captchaValue = captchaValue.ToLower();
+            foreach (string skill in _skills)
+            {
+                if (captchaValue.Equals(skill)) return true;
+            }
+            return false;
         }
     }
 }

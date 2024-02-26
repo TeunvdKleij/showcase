@@ -35,6 +35,10 @@ namespace ServerShowcase.Model
         [MaxLength(600)]
         public required string Message { get; set; }
 
+        [Required]
+        [MinLength(1)]
+        public required string CaptchaInput { get; set; }
+
         public void SanitizeHTML()
         {
             FirstName = SanitizeHTML(FirstName);

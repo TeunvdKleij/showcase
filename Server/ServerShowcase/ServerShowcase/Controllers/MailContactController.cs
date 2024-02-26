@@ -39,6 +39,11 @@ namespace ServerShowcase.Controllers
                 _logger.LogInformation(" --- ModelSate not valid --- ");
                 return BadRequest(ModelState);
             }
+            if (!CaptchaController.CheckCaptcha(mailContact.CaptchaInput))
+            {
+                _logger.LogInformation(" --- Captcha not valid after send request --- ");
+                return BadRequest(ModelState);
+            }
 
             return SendMail(mailContact);
         }

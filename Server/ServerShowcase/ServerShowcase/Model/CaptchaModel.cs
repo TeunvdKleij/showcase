@@ -6,11 +6,6 @@ namespace ServerShowcase.Model
     {
         [Required]
         [MinLength(1)]
-        private string value;
-        public string Value
-        {
-            get { return this.value.ToLower(); }
-            set { this.value = value.ToLower();}
-        }
+        public string Value { get; set; }
     }
 }

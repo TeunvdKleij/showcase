@@ -45,6 +45,7 @@ document.getElementById('catpcha-form').addEventListener('submit', async(event) 
     })
     .then(res => {
         captchaValid = true;
+        document.getElementById('contact-form__CaptchaInput').value = inputCatpchaValue;
         captchaIcon.src = "images/check.png";
     })
     .catch(err => { 
@@ -83,7 +84,7 @@ async function sendMail(event, data, inputs){
         .then(res => {
             makeGreenText("Het is gelukt");
             event.target.reset();
-            for(let i = 0; i < inputs.length-1; i++){
+            for(let i = 0; i < inputs.length-2; i++){
                 document.getElementById('char-count__' + inputs[i].name).textContent =  "0/" + getMaxLengthFromInputValue(inputs[i].name);
             }
             submitButton.disabled = true;
@@ -123,7 +124,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
 function checkEmptyFields(){
     let formInputs = document.getElementById('contact-form').elements;
     let disableSubmit = false;
-    for(let i = 0; i < formInputs.length-1; i++){
+    for(let i = 0; i < formInputs.length-2; i++){
         let input = formInputs[i];
         if(input.value.length <= 0) {
             disableSubmit = true;
@@ -139,6 +140,7 @@ function getMaxLengthFromInputValue(name){
     else if(name === "PhoneNumber") length = 20;
     else if(name === "Subject") length = 200;
     else if(name === "Message") length = 600;
+    else if(name === "CaptchaInput") length = 100;
     return length;
 }
 function toggleSubmitForm(){

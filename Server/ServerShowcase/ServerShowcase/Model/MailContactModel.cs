@@ -47,12 +47,8 @@ namespace ServerShowcase.Model
             string sanitizedText = inputValue;
             if (!string.IsNullOrEmpty(inputValue))
             {
-                //string[] allowedTags = { "b", "i", "u", "strong", "em", "ul", "ol", "li", "a", "br", "hr", "h1", "h2", "h3", "h4", "h5", "h6", "p" };
-                //string regex = $@"<script>|<\/script>";
-                string regex = $@"<script>|<\/script>|type\s?=\s?""hidden""";
-                Console.WriteLine(inputValue);
+                string regex = $@"insert|select|delete|update|<script>|<\/script>|type\s?=\s?""hidden""";
                 sanitizedText = Regex.Replace(inputValue, regex, string.Empty, RegexOptions.IgnoreCase);
-                Console.WriteLine(sanitizedText);
             }
             return sanitizedText;
         }

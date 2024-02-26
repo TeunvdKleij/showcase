@@ -26,6 +26,10 @@ function replaceTags(input){
                 .replaceAll('= "hidden"', " ")
                 .replaceAll('="hidden"', " ")
                 .replaceAll("color: white", " ")
+                .replaceAll("insert", " ")
+                .replaceAll("select", " ")
+                .replaceAll("delete", " ")
+                .replaceAll("update", " ")
     input = input.trim();
     return input;
 }

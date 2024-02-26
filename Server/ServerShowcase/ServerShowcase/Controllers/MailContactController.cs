@@ -56,10 +56,10 @@ namespace ServerShowcase.Controllers
                 mail.Subject = mailContact.Subject;
                 var builder = new BodyBuilder()
                 {
-                    //TextBody = "Phone number: " + mailContact.PhoneNumber + "\n" + "Message: \n" + mailContact.Message
                    HtmlBody = @"<html>"+
                       "<body>" +
                       "<p>Naam : " + mailContact.FirstName + " " + mailContact.LastName + "</p> " +
+                      "<p>Telefoonnummer : " + mailContact.PhoneNumber + "</p> " +
                       "<p>Message:</p><br> " +
                       "<p>" + mailContact.Message + "</p>" +
                       "</body></html>"
